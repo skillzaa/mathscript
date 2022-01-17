@@ -6,7 +6,6 @@ export default class Normal {
 constructor (state,content="xyz"){
 this.state = state;  
 this.content = content;  
-
 }
 width(){
 this.state.getFont();

@@ -6,8 +6,9 @@ export default class State {
         this.y = 100;
         this.fontSize = 50;
         this.fontName = "serif";
+        this.resetFont();
     }
-    getFontSize(n) {
+    getFontSize() {
         return this.fontSize;
     }
     setFontSize(n) {

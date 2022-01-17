@@ -1,1 +1,1 @@
-{"version":3,"file":"prince.d.ts","sourceRoot":"","sources":["../typescript/prince.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,YAAY,CAAC;AAI/B,MAAM,CAAC,OAAO,OAAO,MAAM;IAC3B,KAAK,EAAC,KAAK,CAAC;gBAEA,MAAM,KAAA,EAAC,EAAE,KAAG;IAIxB,IAAI;CAwBH"}
+{"version":3,"file":"prince.d.ts","sourceRoot":"","sources":["../typescript/prince.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,YAAY,CAAC;AAI/B,MAAM,CAAC,OAAO,OAAO,MAAM;IAC3B,KAAK,EAAC,KAAK,CAAC;gBAEA,MAAM,KAAA,EAAC,EAAE,KAAG;IAIxB,IAAI;CA0BH"}

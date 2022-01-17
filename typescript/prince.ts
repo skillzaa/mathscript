@@ -16,11 +16,13 @@ draw(){
         case "p":
             let p = new Power(this.state,this.eq[i].content,this.eq[i].power);
             p.draw();
+            this.state.x = this.state.x + p.width(); 
             console.log("power");
         break;
         case "o":
             let n = new Normal(this.state,this.eq[i].content);
             n.draw();
+            this.state.x = this.state.x + n.width(); 
             console.log("operator");
         break;
       

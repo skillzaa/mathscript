@@ -6,7 +6,7 @@ export default class State {
     ctx: any;
     canvas: any;
     constructor(canvas: any);
-    getFontSize(n: any): number;
+    getFontSize(): number;
     setFontSize(n: any): void;
     setFontName(n: any): void;
     restoreCtx(): void;
