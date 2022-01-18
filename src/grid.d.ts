@@ -1,4 +1,7 @@
 export default class Grid {
+    cell_height: number;
+    cell_width: number;
+    show_numbers: boolean;
     constructor(canvas: any);
     draw(): void;
     draw_horizontal(): void;

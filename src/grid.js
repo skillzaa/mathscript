@@ -5,6 +5,8 @@ export default class Grid {
         this.cell_width = 50;
         this.cell_height = 50;
         this.show_numbers = true;
+        this.numbers_fillStyle = "#ff0000";
+        this.lineColor = "#d9dcf7";
     }
     draw() {
         this.draw_horizontal();
@@ -41,13 +43,14 @@ export default class Grid {
         } while (width > x);
     }
     draw_line(move_to_x, move_to_y, line_to_x, line_to_y) {
+        this.ctx.strokeStyle = this.lineColor;
         this.ctx.beginPath();
         this.ctx.moveTo(move_to_x, move_to_y);
         this.ctx.lineTo(line_to_x, line_to_y);
         this.ctx.stroke();
     }
     draw_number(number, x, y) {
-        this.ctx.fillStyle = 'rgb(250, 0, 0)';
+        this.ctx.fillStyle = this.numbers_fillStyle;
         this.ctx.font = '20px serif';
         this.ctx.textBaseline = "top";
         this.ctx.fillText(number, x, y);
