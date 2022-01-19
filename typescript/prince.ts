@@ -1,5 +1,5 @@
 import State from "./state.js";
-import Power from "./power.js";
+import Power from "./eqEngine/power.js";
 import Normal from "./normal.js";
 import Special from "./special.js";
 

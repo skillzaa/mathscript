@@ -1,61 +1,72 @@
 import State from "./state.js";
-
+import sqrt from "./sqrt.js";
+import Power from "./power.js";
 
 export default class EqEnginge{
     eq:[]=[];
     state:State;
-constructor (canvas,eq:[]=[]){
+constructor (canvas:any,eq:[]=[]){
 this.eq = eq;  
-this.canvas = canvas;
-this.ctx = canvas.getContext('2d');
-this.x = 100;
-this.y = 100;
-this.fontSize = 50;
-this.fontName = "serif";
-this.fontColor = "#281be2"; 
-this.strokeStyle = "#281be2"; 
+// this.canvas = canvas;
+this.state = new State(canvas);
+this.state.x = 200;
+this.state.y = 200;
+this.state.ctx = canvas.getContext('2d');
+// this.x = 100;
+// this.y = 100;
+// this.fontSize = 50;
+// this.fontName = "serif";
+// this.fontColor = "#281be2"; 
+// this.strokeStyle = "#281be2"; 
 //--need to be changed
-this.ctx.fillStyle = this.fontColor; 
-this.ctx.strokeStyle = this.strokeStyle; 
+// this.state.ctx.fillStyle = this.fontColor; 
+// this.state.ctx.strokeStyle = this.strokeStyle; 
 // this.resetFont();
+this.calculate();
+this.draw();
 } 
 calculate(){
     for (let i = 0; i < this.eq.length; i++) {
-        let measurements = this.ctx.measureText(this.eq[i].content);
-        this.eq[i].width = Math.ceil(measurements.width);
-        // this.ctx.fillText(this.eq[i].content, this.eq[i].x, this.eq[i].y);
+        this.eq[i].width = this.state.chars_width(this.eq[i].content);
         console.log(this.eq[i].content,this.eq[i].width);   
     }  
 }  
 draw(){
-    let x = 200;
-    let y = 200;
+    
 for (let i = 0; i < this.eq.length; i++) {
 
     switch (this.eq[i].type) {
         case "normal":
-            this.ctx.fillText(this.eq[i].content,x,y);  
+            this.state.ctx.fillText(this.eq[i].content,this.state.x,this.state.y);  
+            this.state.x = this.state.x + this.eq[i].width;
             break;
         
-        case "power":
-        this.ctx.save();
-        this.ctx.font = '25px serif';
-        this.ctx.fillText(this.eq[i].content,x,y);  
-        this.ctx.restore();
+        case "ss":
+        this.state.ctx.save();
+        this.state.ctx.font = '25px serif';
+        this.state.ctx.fillText(this.eq[i].content,this.state.x,this.state.y);  
+        this.state.ctx.restore();
+        this.state.x = this.state.x + this.eq[i].width;
         break;
 
         case "sqrt":
-        this.ctx.save();
-        this.ctx.font = '50px serif';  
-this.ctx.fillText(String.fromCodePoint(8730),x,y);
-        this.ctx.restore();
+               sqrt(this.state,this.eq[i]);
+            //    this.state.x = this.state.x + this.eq[i].width;
+               this.state.x = this.state.x + this.eq[i].width;
+        break;
+
+        case "power":
+               let p = new Power(this.state,         this.eq[i].content,this.eq[i].power);
+               p.draw();
+               this.state.x = this.state.x + p.width();
         break;
 
         case "icon":
-        this.ctx.save();
-        this.ctx.font = '50px serif';  
-this.ctx.fillText(String.fromCodePoint(this.eq[i].icon),x,y);
-        this.ctx.restore();
+        this.state.ctx.save();
+        this.state.ctx.font = '50px serif';  
+        this.state.ctx.fillText(String.fromCodePoint(this.eq[i].icon),this.state.x,this.state.y);
+        this.state.ctx.restore();
+        this.state.x = this.state.x + 30;
         break;
     
         default:
@@ -63,7 +74,7 @@ this.ctx.fillText(String.fromCodePoint(this.eq[i].icon),x,y);
         break;
     }
    
-    x = x + this.eq[i].width;
+   
     // console.log(this.eq[i]);   
 }
 }
