@@ -18,8 +18,7 @@ width():number{
 height():number{
 return 55;
 }
-draw(arg={}):DrawResult{ 
-return new DrawResult();      
+draw(arg={}):void{ 
 }//draw fn
 
 }

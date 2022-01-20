@@ -1,4 +1,3 @@
-import DrawResult from "./drawResult.js";
 export default class SegmentItemAbs {
     constructor(state) {
         this.data = {};
@@ -13,6 +12,5 @@ export default class SegmentItemAbs {
         return 55;
     }
     draw(arg = {}) {
-        return new DrawResult();
     } //draw fn
 }

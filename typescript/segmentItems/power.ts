@@ -8,7 +8,7 @@ let power_data = {
     moveup:5,
 
 }
-export default class SuperScript extends SegmentItemAbs {
+export default class Power extends SegmentItemAbs {
 private content:string;
 private power:string;
 public moveup:number;
@@ -27,7 +27,7 @@ return Math.ceil(power_measur.width + measurements.width);
 height(){
     return this.width() * 1.5;    
 }
-draw(arg={}){
+draw(arg={}):void{
     // this.state.saveCtx();    
     const start_font_size =  this.state.getFontSize();
     this.ctx.fillText(this.content, this.state.x, this.state.y);
@@ -38,9 +38,6 @@ draw(arg={}){
     this.state.setFontSize(start_font_size);
     // this.state.restoreCtx();
 ///////    
-let r = new  DrawResult();   
-r.x = content_width + 20;
-return r;
 }
 
 }

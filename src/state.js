@@ -36,11 +36,11 @@ export default class State {
     getFont() {
         return this.ctx.font;
     }
-    setX(n) {
-        this.x = n;
+    addX(n) {
+        this.x = this.x + n;
     }
-    setY(n) {
-        this.y = n;
+    addY(n) {
+        this.y = this.y + n;
     }
     canvas_width() {
         return this.canvas.width;

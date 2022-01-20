@@ -6,10 +6,9 @@ export default class Segment implements ISegment {
     private eq;
     private localX;
     constructor(state: State);
+    width(): number;
     draw(arg?: {}): DrawResult;
-    insert_power(data?: {
-        content: string;
-        power: string;
-    }): void;
+    insert_power(data?: {}): void;
+    insert_normal(data?: {}): void;
 }
 //# sourceMappingURL=segment.d.ts.map

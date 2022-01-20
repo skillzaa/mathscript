@@ -13,7 +13,7 @@ export default class EqEnginge {
         }
         console.log("equation draw complete");
     }
-    insert() {
+    add_segment() {
         let s = new Segment(this.state);
         this.eq.push(s);
         return s;

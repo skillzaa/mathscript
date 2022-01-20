@@ -1,9 +1,8 @@
 import State from "../state.js";
-import ISegment from "../segment/Isegment.js";
 import Segment from "../segment/segment.js";
 
 export default class EqEnginge{
-    eq:[ISegment]|[]=[];
+    eq:Segment[] =[];
     state:State;
 
 constructor (canvas:any){
@@ -19,7 +18,7 @@ for (let i = 0; i < this.eq.length; i++) {
 console.log("equation draw complete");
 }
 
-insert(){
+add_segment(){
 let s = new Segment(this.state);
 this.eq.push(s);
 return s;

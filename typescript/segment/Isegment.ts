@@ -1,5 +1,6 @@
-import IDrawResult from "./drawResult.js";
+// import IDrawResult from "./drawResult.js";
 
 export default interface ISegment{
-    draw(arg:{}):IDrawResult; 
+    draw(arg:{}):void; 
+    width():number;
 }

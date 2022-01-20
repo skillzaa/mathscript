@@ -1,14 +1,14 @@
 export default class Normal {
-    constructor(state, content = "xyz") {
+    constructor(state, data = {}) {
         this.state = state;
-        this.content = content;
+        this.content = data.content;
     }
     width() {
         this.state.getFont();
         let r = this.state.ctx.measureText(this.content);
         return r.width;
     }
-    draw() {
+    draw(args = {}) {
         this.state.ctx.fillText(this.content, this.state.x, this.state.y);
     }
 }

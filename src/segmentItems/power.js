@@ -1,11 +1,10 @@
-import DrawResult from "./drawResult.js";
 import SegmentItemAbs from "./segmentItem.js";
 let power_data = {
     content: "",
     power: "2",
     moveup: 5,
 };
-export default class SuperScript extends SegmentItemAbs {
+export default class Power extends SegmentItemAbs {
     constructor(state, data = {}) {
         super(state);
         this.content = data.content;
@@ -31,8 +30,5 @@ export default class SuperScript extends SegmentItemAbs {
         this.state.setFontSize(start_font_size);
         // this.state.restoreCtx();
         ///////    
-        let r = new DrawResult();
-        r.x = content_width + 20;
-        return r;
     }
 }

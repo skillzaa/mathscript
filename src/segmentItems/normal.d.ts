@@ -1,9 +1,10 @@
 import State from "../state.js";
-export default class Normal {
+import ISegment from "../segment/Isegment.js";
+export default class Normal implements ISegment {
     content: string;
     state: State;
-    constructor(state: any, content?: string);
-    width(): any;
-    draw(): void;
+    constructor(state: State, data?: {});
+    width(): number;
+    draw(args?: {}): void;
 }
 //# sourceMappingURL=normal.d.ts.map

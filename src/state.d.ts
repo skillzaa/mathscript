@@ -14,8 +14,8 @@ export default class State {
     saveCtx(): void;
     resetFont(): void;
     getFont(): string;
-    setX(n: number): void;
-    setY(n: number): void;
+    addX(n: number): void;
+    addY(n: number): void;
     canvas_width(): number;
     canvas_height(): number;
 }

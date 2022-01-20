@@ -46,11 +46,11 @@ getFont():string{
   return   this.ctx.font;
 }
 
-setX(n:number){
-    this.x = n;
+addX(n:number){
+    this.x = this.x + n;
 }
-setY(n:number){
-    this.y = n;
+addY(n:number){
+    this.y = this.y + n;
 }
 canvas_width():number{
     return this.canvas.width;
