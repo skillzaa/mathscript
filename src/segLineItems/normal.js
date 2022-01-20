@@ -5,7 +5,8 @@ export default class Normal {
     width() {
         return 100;
     }
-    draw(args = {}) {
+    draw(state, ctx, local_x) {
         ctx.fillText(this.content, state.x, state.y);
+        return this.width();
     }
 }

@@ -2,15 +2,15 @@
 export default class State {
 public x:number;
 public y:number;
+public ctx:CanvasRenderingContext2D;
 
 private fontSize:number;
 private fontName:string;
-public ctx:any;
-private canvas:any;
+private canvas: HTMLCanvasElement;
 
-constructor (canvas:any){
+constructor (canvas:HTMLCanvasElement,ctx:CanvasRenderingContext2D){
 this.canvas = canvas;
-this.ctx = canvas.getContext('2d');
+this.ctx = ctx;
 this.x = 100;
 this.y = 100;
 this.fontSize = 50;

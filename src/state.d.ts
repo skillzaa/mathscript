@@ -1,11 +1,11 @@
 export default class State {
     x: number;
     y: number;
+    ctx: CanvasRenderingContext2D;
     private fontSize;
     private fontName;
-    ctx: any;
     private canvas;
-    constructor(canvas: any);
+    constructor(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D);
     getFontSize(): number;
     chars_width(chars?: string): number;
     setFontSize(n: number): void;

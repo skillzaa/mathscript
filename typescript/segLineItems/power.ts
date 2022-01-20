@@ -1,6 +1,6 @@
 import State from "../state.js";
-import DrawResult from "./drawResult.js";
-import SegmentItemAbs from "./segmentItem.js";
+import DrawResult from "./drawResult.js.js";
+import SegmentItemAbs from "./segmentItem.js.js";
 
 let power_data = {
     content:"",

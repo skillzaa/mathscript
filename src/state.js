@@ -1,7 +1,7 @@
 export default class State {
-    constructor(canvas) {
+    constructor(canvas, ctx) {
         this.canvas = canvas;
-        this.ctx = canvas.getContext('2d');
+        this.ctx = ctx;
         this.x = 100;
         this.y = 100;
         this.fontSize = 50;
