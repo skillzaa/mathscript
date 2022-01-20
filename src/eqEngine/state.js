@@ -6,11 +6,7 @@ export default class State {
         this.y = 100;
         this.fontSize = 50;
         this.fontName = "serif";
-        this.fontColor = "#281be2";
-        this.strokeStyle = "#281be2";
         //--need to be changed
-        this.ctx.fillStyle = this.fontColor;
-        this.ctx.strokeStyle = this.strokeStyle;
         this.resetFont();
     }
     getFontSize() {
@@ -39,5 +35,17 @@ export default class State {
     }
     getFont() {
         return this.ctx.font;
+    }
+    setX(n) {
+        this.x = n;
+    }
+    setY(n) {
+        this.y = n;
+    }
+    canvas_width() {
+        return this.canvas.width;
+    }
+    canvas_height() {
+        return this.canvas.height;
     }
 }

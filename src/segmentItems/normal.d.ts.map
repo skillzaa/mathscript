@@ -1,0 +1,1 @@
+{"version":3,"file":"normal.d.ts","sourceRoot":"","sources":["../../typescript/segmentItems/normal.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,aAAa,CAAC;AAEhC,MAAM,CAAC,OAAO,OAAO,MAAM;IACvB,OAAO,EAAC,MAAM,CAAC;IACf,KAAK,EAAC,KAAK,CAAC;gBACH,KAAK,KAAA,EAAC,OAAO,SAAM;IAIhC,KAAK;IAOL,IAAI;CAIH"}

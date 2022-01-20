@@ -1,17 +1,22 @@
 export default class State {
     x: number;
     y: number;
-    fontSize: number;
-    fontName: string;
+    private fontSize;
+    private fontName;
     ctx: any;
-    canvas: any;
+    private canvas;
     constructor(canvas: any);
     getFontSize(): number;
-    setFontSize(n: any): void;
-    setFontName(n: any): void;
+    chars_width(chars?: string): number;
+    setFontSize(n: number): void;
+    setFontName(n: string): void;
     restoreCtx(): void;
     saveCtx(): void;
     resetFont(): void;
-    getFont(): any;
+    getFont(): string;
+    setX(n: number): void;
+    setY(n: number): void;
+    canvas_width(): number;
+    canvas_height(): number;
 }
 //# sourceMappingURL=state.d.ts.map

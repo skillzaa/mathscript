@@ -6,13 +6,15 @@ export default class State {
         this.y = 100;
         this.fontSize = 50;
         this.fontName = "serif";
-        this.fontColor = "#281be2";
         //--need to be changed
-        this.ctx.fillStyle = this.fontColor;
         this.resetFont();
     }
     getFontSize() {
         return this.fontSize;
+    }
+    chars_width(chars = "") {
+        let m = this.ctx.measureText(chars);
+        return Math.ceil(m.width);
     }
     setFontSize(n) {
         this.fontSize = n;
@@ -33,5 +35,17 @@ export default class State {
     }
     getFont() {
         return this.ctx.font;
+    }
+    setX(n) {
+        this.x = n;
+    }
+    setY(n) {
+        this.y = n;
+    }
+    canvas_width() {
+        return this.canvas.width;
+    }
+    canvas_height() {
+        return this.canvas.height;
     }
 }

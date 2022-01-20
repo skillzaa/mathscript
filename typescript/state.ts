@@ -1,32 +1,35 @@
 
+export default class State {
+public x:number;
+public y:number;
 
-export  default class State {
-    x:number;
-    y:number;
-    fontSize:number;
-    fontName:string;
-    ctx:any;
-    canvas:any;
-constructor (canvas){
+private fontSize:number;
+private fontName:string;
+public ctx:any;
+private canvas:any;
+
+constructor (canvas:any){
 this.canvas = canvas;
 this.ctx = canvas.getContext('2d');
 this.x = 100;
 this.y = 100;
 this.fontSize = 50;
 this.fontName = "serif";
-this.fontColor = "#281be2"; 
 //--need to be changed
-this.ctx.fillStyle = this.fontColor; 
 this.resetFont();
 }
 getFontSize(){
     return this.fontSize;
 }
-setFontSize(n){
+chars_width(chars=""){
+let m = this.ctx.measureText(chars);
+return Math.ceil(m.width);    
+}
+setFontSize(n:number){
     this.fontSize = n;
     this.resetFont();
 }
-setFontName(n){
+setFontName(n:string){
     this.fontName = n;
     this.resetFont();
 }
@@ -39,7 +42,20 @@ saveCtx(){
 resetFont(){
     this.ctx.font = this.fontSize + "px " + this.fontName;
 }
-getFont(){
+getFont():string{
   return   this.ctx.font;
+}
+
+setX(n:number){
+    this.x = n;
+}
+setY(n:number){
+    this.y = n;
+}
+canvas_width():number{
+    return this.canvas.width;
+}
+canvas_height():number{
+    return this.canvas.height;
 }
 }

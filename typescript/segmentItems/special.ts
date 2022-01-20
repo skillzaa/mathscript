@@ -1,4 +1,4 @@
-import State from "./state.js";
+import State from "../state.js";
 
 export default class Special {
     content:number; 

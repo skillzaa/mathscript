@@ -1,7 +1,12 @@
 import State from "../state.js";
-export default class Segment {
-    seg: String;
-    state: State;
-    constructor(state: State, seg: String);
+import ISegment from "../Isegment.js";
+import IDrawResult from "../IDrawResult.js";
+export default class Segment implements ISegment {
+    private state;
+    private eq;
+    private localX;
+    private localY;
+    constructor(state: State);
+    draw(arg?: {}): IDrawResult;
 }
 //# sourceMappingURL=segment.d.ts.map
