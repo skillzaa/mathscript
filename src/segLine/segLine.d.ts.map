@@ -1,1 +1,1 @@
-{"version":3,"file":"segLine.d.ts","sourceRoot":"","sources":["../../typescript/segLine/segLine.ts"],"names":[],"mappings":"AAAA,OAAO,UAAU,MAAM,6BAA6B,CAAC;AAIrD,MAAM,CAAC,OAAO,OAAO,OAAQ,SAAQ,UAAU;IAO/C,aAAa,CAAC,GAAG,EAAC,MAAM;CAMvB"}
+{"version":3,"file":"segLine.d.ts","sourceRoot":"","sources":["../../typescript/segLine/segLine.ts"],"names":[],"mappings":"AAAA,OAAO,UAAU,MAAM,6BAA6B,CAAC;AAErD,OAAO,EAAC,UAAU,EAAC,MAAM,2BAA2B,CAAC;AAGrD,MAAM,CAAC,OAAO,OAAO,OAAQ,SAAQ,UAAU;IAE/C,YAAY,CAAC,IAAI,EAAC,UAAU;IAK5B,aAAa,CAAC,GAAG,EAAC,MAAM;CAMvB"}

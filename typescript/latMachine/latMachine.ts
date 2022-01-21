@@ -7,10 +7,10 @@ constructor (){
 this.segments = [];  
 } 
 //--function arguments shd be arguments and not classes unless required absoliutely.
-draw(state:State,ctx:CanvasRenderingContext2D):number{    
+draw(state:State):number{    
 let local_x = state.x;    
 for (let i = 0; i < this.segments.length; i++) {
-        let delta_x = this.segments[i].draw(state,ctx,local_x);
+        let delta_x = this.segments[i].draw(state,local_x);
         local_x += delta_x;
 }
 return local_x;

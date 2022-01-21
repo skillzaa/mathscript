@@ -1,12 +1,11 @@
+import ISegment from "../latMachine/Isegment.js";
 import State from "../state.js";
-import SegmentItemAbs from "./segmentItem.js.js";
-export default class Power extends SegmentItemAbs {
+import { power_data } from "../app_data/power_data.js";
+export default class Power implements ISegment {
     private content;
     private power;
     moveup: number;
-    constructor(state: State, data?: {});
-    width(): number;
-    height(): number;
-    draw(arg?: {}): void;
+    constructor(data: power_data);
+    draw(state: State, local_x: number): number;
 }
 //# sourceMappingURL=power.d.ts.map

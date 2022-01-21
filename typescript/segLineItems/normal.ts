@@ -7,14 +7,11 @@ constructor (content:string){
 this.content = content;  
 }
 
-width():number{
-return 100;    
-}
 
-
-draw(state:State,ctx:CanvasRenderingContext2D,local_x:number):number{
-ctx.fillText(this.content, state.x, state.y);
-return this.width();
+draw(state:State,local_x:number):number{
+state.ctx.fillText(this.content, local_x, state.y);
+let m = state.ctx.measureText(this.content); 
+return m.width;
 }
 
 }

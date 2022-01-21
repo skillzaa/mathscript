@@ -4,10 +4,10 @@ export default class LatMachine {
         this.segments = [];
     }
     //--function arguments shd be arguments and not classes unless required absoliutely.
-    draw(state, ctx) {
+    draw(state) {
         let local_x = state.x;
         for (let i = 0; i < this.segments.length; i++) {
-            let delta_x = this.segments[i].draw(state, ctx, local_x);
+            let delta_x = this.segments[i].draw(state, local_x);
             local_x += delta_x;
         }
         return local_x;

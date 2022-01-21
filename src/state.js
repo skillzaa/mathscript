@@ -4,7 +4,7 @@ export default class State {
         this.ctx = ctx;
         this.x = 100;
         this.y = 100;
-        this.fontSize = 50;
+        this.fontSize = 40;
         this.fontName = "serif";
         //--need to be changed
         this.resetFont();
