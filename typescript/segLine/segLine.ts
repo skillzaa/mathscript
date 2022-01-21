@@ -5,9 +5,14 @@ import Normal from "../segLineItems/normal.js";
 import Sqrt from "../segLineItems/sqrt.js";
 import Special from "../segLineItems/special.js";
 import State from "../state.js";
-
+import SqrtEnd from "../segLineItems/sqrtEnd.js";
+import LocalState from "./localState.js";
 export default class SegLine extends LatMachine{
 
+constructor(){
+super();
+this.local_state = new LocalState();
+}
 
 
 
@@ -21,8 +26,13 @@ insert_normal(str:string){
     let nn = this.add_segment(n);
     return nn;
 }
-insert_sqrt(str:string){
-    let n = new Sqrt(str);
+insert_sqrtend() {
+    let n = new SqrtEnd();
+    let nn = this.add_segment(n);
+    return nn;
+}
+insert_sqrt(){
+    let n = new Sqrt();
     let nn = this.add_segment(n);
     return nn;
 }

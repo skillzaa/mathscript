@@ -1,8 +1,8 @@
 import ISegment from "../latMachine/Isegment.js";
 import State from "../state.js";
+import LocalState from "../segLine/localState.js";
 export default class Sqrt implements ISegment {
-    content: string;
-    constructor(content?: string);
-    draw(state: State, local_x: number): number;
+    constructor();
+    draw(state: State, local_x: number, local_state: LocalState): number;
 }
 //# sourceMappingURL=sqrt.d.ts.map

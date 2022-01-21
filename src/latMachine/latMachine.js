@@ -3,7 +3,7 @@ export default class LatMachine {
     constructor() {
         this.segments = [];
         this.segments = [];
-        this.segment_gap = 5;
+        this.segment_gap = 2;
         this.local_state = {};
     }
     //--function arguments shd be concrete data types and not classes / objects unless required absoliutely.

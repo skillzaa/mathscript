@@ -9,7 +9,7 @@ public segment_gap:number;
 protected local_state:{};
 constructor (){
 this.segments = [];  
-this.segment_gap = 5;
+this.segment_gap = 2;
 this.local_state = {};
 } 
 //--function arguments shd be concrete data types and not classes / objects unless required absoliutely.

@@ -1,6 +1,6 @@
 
 
-export default class LocalData  {
+export default class LocalState  {
 
 sqrt_open = false;
 sqrt_startX = 0;

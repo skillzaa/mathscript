@@ -1,6 +1,5 @@
 import Grid from "./grid.js";
 import EqEngine from "./eqEngine/eqengine.js";
-// import Power from "./segLineItems/power.js";
 import SegLine from "./segLine/segLine.js";
 import State from "./state.js";
 let canvas = document.getElementById("crown");
@@ -15,13 +14,16 @@ g.draw();
 let eengn = new EqEngine();
 eengn.segment_gap = 50;
 let segline = new SegLine();
-segline.insert_special();
-segline.insert_special(127801);
+// segline.insert_special();
+// segline.insert_special(127801);
 segline.insert_normal(" {(a+b)} = c ");
 segline.insert_normal(" x+y = z");
 segline.insert_power({ content: "H", power: "n", moveup: 10 });
 // segline.insert_power({content:"H" , power:"n" , moveup: 10});
-segline.insert_sqrt("abcdef");
+segline.insert_sqrt();
+segline.insert_normal("aef");
+segline.insert_power({ content: "H", power: "n", moveup: 10 });
+segline.insert_sqrtend();
 //==============================
 eengn.add_segment(segline);
 console.log("eengn", eengn);

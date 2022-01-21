@@ -1,23 +1,15 @@
 export default class Sqrt {
-    constructor(content = "") {
-        this.content = content;
-        2;
+    constructor() {
     }
-    draw(state, local_x) {
+    draw(state, local_x, local_state) {
         // state.ctx.font = '50px serif';  
         state.ctx.fillText(String.fromCodePoint(8730), local_x, state.y);
         let sqrt_width = state.ctx.measureText(String.fromCodePoint(8730)).width;
-        let content_width = state.ctx.measureText(this.content).width;
-        state.ctx.fillText(this.content, local_x + sqrt_width, state.y);
-        //---------------
-        state.ctx.strokeStyle = "red";
-        state.ctx.beginPath();
-        // let lineX = state.x + data.width;
-        let lineX = local_x + sqrt_width;
-        state.ctx.moveTo(lineX, state.y);
-        state.ctx.lineTo(lineX + content_width, state.y);
-        state.ctx.stroke();
+        // let content_width = state.ctx.measureText(this.content).width;
+        //=====add to local state
+        local_state.sqrt_startX = local_x + sqrt_width;
+        local_state.sqrt_startY = state.y;
         // state.ctx.restore();
-        return 200;
+        return sqrt_width;
     }
 } //sqrt    
