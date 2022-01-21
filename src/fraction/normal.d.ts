@@ -3,6 +3,6 @@ import State from "../state.js";
 export default class Normal implements ISegment {
     content: string;
     constructor(content: string);
-    draw(state: State, starting_x: number): number;
+    draw(state: State, local_x: number): number;
 }
 //# sourceMappingURL=normal.d.ts.map

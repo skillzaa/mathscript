@@ -8,8 +8,8 @@ this.content = content;
 }
 
 
-draw(state:State,local_x:number):number{
-state.ctx.fillText(this.content, local_x, state.y);
+draw(state:State,starting_x:number):number{
+state.ctx.fillText(this.content, starting_x, state.y);
 let m = state.ctx.measureText(this.content); 
 return m.width;
 }
