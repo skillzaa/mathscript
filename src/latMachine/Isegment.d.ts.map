@@ -1,1 +1,1 @@
-{"version":3,"file":"Isegment.d.ts","sourceRoot":"","sources":["../../typescript/latMachine/Isegment.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,aAAa,CAAC;AAEhC,MAAM,CAAC,OAAO,WAAW,QAAQ;IAC7B,IAAI,CAAC,KAAK,EAAC,KAAK,EAAC,UAAU,EAAC,MAAM,GAAE,MAAM,CAAC;CAC9C"}
+{"version":3,"file":"Isegment.d.ts","sourceRoot":"","sources":["../../typescript/latMachine/Isegment.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,aAAa,CAAC;AAGhC,MAAM,CAAC,OAAO,WAAW,QAAQ;IAC7B,IAAI,CAAC,KAAK,EAAC,KAAK,EAAC,UAAU,EAAC,MAAM,EAAC,WAAW,EAAC,MAAM,GAAE,MAAM,CAAC;CACjE"}

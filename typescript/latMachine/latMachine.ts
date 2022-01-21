@@ -1,22 +1,24 @@
 import ISegment from "./Isegment.js";
 import State from "../state.js";
+// import LocalData from "./local_data.js";
 
 export default class LatMachine implements ISegment{
 
 private segments:ISegment[] =[];
 public segment_gap:number;
-
+protected local_state:{};
 constructor (){
 this.segments = [];  
 this.segment_gap = 5;
+this.local_state = {};
 } 
 //--function arguments shd be concrete data types and not classes / objects unless required absoliutely.
-draw(state:State,starting_x:number=0):number{    
+draw(state:State,starting_x:number=0,local_data={}):number{    
 let local_x = starting_x;    
 for (let i = 0; i < this.segments.length; i++) {
         //-----save state ctx here
         state.ctx.save();
-        let delta_x = this.segments[i].draw(state,local_x);
+        let delta_x = this.segments[i].draw(state,local_x,this.local_state);
         //-----restore state ctx here
         state.ctx.restore();
         //--there may be control segments which may not move the x in that case dont add gap

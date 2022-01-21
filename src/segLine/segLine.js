@@ -4,20 +4,6 @@ import Normal from "../segLineItems/normal.js";
 import Sqrt from "../segLineItems/sqrt.js";
 import Special from "../segLineItems/special.js";
 export default class SegLine extends LatMachine {
-    constructor() {
-        super();
-        this.sqrt_open = false;
-        this.sqrt_startX = 0;
-        this.sqrt_startY = 0;
-    }
-    // draw(state:State,starting_x:number=0):number{   
-    // return super.draw(state,starting_x);
-    // }
-    //=================================
-    //=================================
-    //=================================
-    //=================================
-    //=================================
     insert_power(data) {
         let nn = this.add_segment(new Power(data));
         return nn;

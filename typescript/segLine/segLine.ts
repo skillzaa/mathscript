@@ -7,30 +7,10 @@ import Special from "../segLineItems/special.js";
 import State from "../state.js";
 
 export default class SegLine extends LatMachine{
-private sqrt_open:boolean;
-private sqrt_startX:number;
-private sqrt_startY:number;
-constructor(){
-super();
-this.sqrt_open = false;
-this.sqrt_startX = 0;
-this.sqrt_startY = 0;
-}
-// draw(state:State,starting_x:number=0):number{   
-
-// return super.draw(state,starting_x);
-// }
 
 
 
 
-
-
-//=================================
-//=================================
-//=================================
-//=================================
-//=================================
 insert_power(data:power_data){
 let nn = this.add_segment(new Power(data));
 return nn;
