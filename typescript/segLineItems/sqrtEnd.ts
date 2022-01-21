@@ -2,12 +2,11 @@ import ISegment from "../latMachine/Isegment.js";
 import State from "../state.js";
 
 
-export default class Sqrt implements ISegment {
-    public content:string;
-        
-    constructor (content=""){
-    this.content = content;2
-    }
+export default class SqrtEnd implements ISegment {
+constructor (){
+
+}
+
 draw(state:State,local_x:number):number{
     // state.ctx.font = '50px serif';  
     state.ctx.fillText(String.fromCodePoint(8730),local_x,state.y);

@@ -4,9 +4,11 @@ import State from "../state.js";
 
 export default class Sqrt implements ISegment {
     public content:string;
+    public add_to_top_line:number;
         
     constructor (content=""){
     this.content = content;2
+    this.add_to_top_line = 10;
     }
 draw(state:State,local_x:number):number{
     // state.ctx.font = '50px serif';  
@@ -22,7 +24,7 @@ draw(state:State,local_x:number):number{
     // let lineX = state.x + data.width;
     let lineX = local_x + sqrt_width ;
     state.ctx.moveTo(lineX , state.y);
-    state.ctx.lineTo(lineX + content_width , state.y);
+    state.ctx.lineTo(lineX + content_width + this.add_to_top_line , state.y);
     state.ctx.stroke();
     // state.ctx.restore();
 

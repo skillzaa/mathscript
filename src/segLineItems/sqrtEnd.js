@@ -1,7 +1,5 @@
-export default class Sqrt {
-    constructor(content = "") {
-        this.content = content;
-        2;
+export default class SqrtEnd {
+    constructor() {
     }
     draw(state, local_x) {
         // state.ctx.font = '50px serif';  

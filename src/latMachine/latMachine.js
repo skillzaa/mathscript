@@ -13,7 +13,10 @@ export default class LatMachine {
             let delta_x = this.segments[i].draw(state, local_x);
             //-----restore state ctx here
             state.ctx.restore();
-            local_x += delta_x + this.segment_gap;
+            //--there may be control segments which may not move the x in that case dont add gap
+            if (delta_x > 0) {
+                local_x += delta_x + this.segment_gap;
+            }
         }
         return local_x;
     }

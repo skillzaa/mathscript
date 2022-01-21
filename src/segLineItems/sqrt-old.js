@@ -2,6 +2,7 @@ export default class Sqrt {
     constructor(content = "") {
         this.content = content;
         2;
+        this.add_to_top_line = 10;
     }
     draw(state, local_x) {
         // state.ctx.font = '50px serif';  
@@ -15,7 +16,7 @@ export default class Sqrt {
         // let lineX = state.x + data.width;
         let lineX = local_x + sqrt_width;
         state.ctx.moveTo(lineX, state.y);
-        state.ctx.lineTo(lineX + content_width, state.y);
+        state.ctx.lineTo(lineX + content_width + this.add_to_top_line, state.y);
         state.ctx.stroke();
         // state.ctx.restore();
         return 200;
