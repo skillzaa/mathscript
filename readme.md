@@ -26,3 +26,9 @@ return segment;
 - Now lets look at the fact that though Lat Machine accepts segments that implements ISegment interface BUT Lat Machine its self also implements ISegment interface **thus is chainable**.
 
 > The Lat Machine accepts segments that implements ISegment but itsself also implements ISegment thus is chainable. Using this we can create tree structures of Lat Machines.
+
+---
+The simplest way to apply OCP is to implement the new functionality on new derived (sub)classes that inherit the original class implementation. Another way is to mediate client access to the original class with an abstract interface, so new functionality can be implemented on new classes that are accessed through the same interface. Both ways create new classes and leave the original implementation untouched.
+---
+
+* Remember the Lat Machine is not a base class for all, it is just a class that is chainable; use it where it works.

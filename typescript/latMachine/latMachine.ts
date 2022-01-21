@@ -10,11 +10,15 @@ constructor (){
 this.segments = [];  
 this.segment_gap = 5;
 } 
-//--function arguments shd be arguments and not classes unless required absoliutely.
+//--function arguments shd be concrete data types and not classes / objects unless required absoliutely.
 draw(state:State,starting_x:number=0):number{    
 let local_x = starting_x;    
 for (let i = 0; i < this.segments.length; i++) {
+        //-----save state ctx here
+        state.ctx.save();
         let delta_x = this.segments[i].draw(state,local_x);
+        //-----restore state ctx here
+        state.ctx.restore();
         local_x += delta_x + this.segment_gap;
 }
 return local_x;

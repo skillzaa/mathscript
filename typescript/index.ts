@@ -11,16 +11,15 @@ let state= new State(canvas,ctx);
 let g = new Grid(canvas);
 g.draw();
 
-
 let eengn = new EqEngine();
 eengn.segment_gap = 50;
 let segline = new SegLine();
+segline.insert_special();
 segline.insert_normal(" {(a+b)} = c ");
 segline.insert_normal(" x+y = z");
 segline.insert_power({content:"H" , power:"n" , moveup: 10});
 // segline.insert_power({content:"H" , power:"n" , moveup: 10});
 segline.insert_sqrt("abcdef");
-//==============================
 //==============================
 eengn.add_segment(segline);
 console.log("eengn",eengn);
