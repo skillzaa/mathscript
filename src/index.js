@@ -14,15 +14,16 @@ g.draw();
 let eengn = new EqEngine();
 eengn.segment_gap = 50;
 let segline = new SegLine();
+segline.segment_gap = 4;
 // segline.insert_special();
 // segline.insert_special(127801);
 segline.insert_normal(" {(a+b)} = c ");
 segline.insert_normal(" x+y = z");
-segline.insert_power({ content: "H", power: "n", moveup: 10 });
+segline.insert_power("H", "n");
 // segline.insert_power({content:"H" , power:"n" , moveup: 10});
 segline.insert_sqrt();
 segline.insert_normal("aef");
-segline.insert_power({ content: "H", power: "n", moveup: 10 });
+segline.insert_power("KEW", "w");
 segline.insert_sqrtend();
 //==============================
 eengn.add_segment(segline);

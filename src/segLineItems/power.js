@@ -1,8 +1,8 @@
 export default class Power {
-    constructor(data) {
-        this.content = data.content;
-        this.power = data.power;
-        this.moveup = data.moveup || 5;
+    constructor(content = "x", power = "2") {
+        this.content = content;
+        this.power = power;
+        this.moveup = 5;
     }
     draw(state, local_x) {
         // state.ctx.save();

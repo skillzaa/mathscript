@@ -16,8 +16,9 @@ this.local_state = new LocalState();
 
 
 
-insert_power(data:power_data){
-let nn = this.add_segment(new Power(data));
+insert_power(content:string,power:string){
+    let pwr = new Power(content,power);
+    let nn = this.add_segment(pwr);
 return nn;
 }
 

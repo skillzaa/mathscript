@@ -11,6 +11,7 @@ export default class LatMachine {
         let local_x = starting_x;
         for (let i = 0; i < this.segments.length; i++) {
             //-----save state ctx here
+            state.resetFont();
             state.ctx.save();
             let delta_x = this.segments[i].draw(state, local_x, this.local_state);
             //-----restore state ctx here

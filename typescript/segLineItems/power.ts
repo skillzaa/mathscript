@@ -8,10 +8,10 @@ private content:string;
 private power:string;
 public moveup:number;
     
-constructor (data:power_data){
-this.content = data.content;
-this.power = data.power;
-this.moveup = data.moveup || 5;
+constructor (content:string="x",power:string="2"){
+this.content = content;
+this.power = power;
+this.moveup = 5;
 }
 
 

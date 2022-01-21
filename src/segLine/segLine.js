@@ -10,8 +10,9 @@ export default class SegLine extends LatMachine {
         super();
         this.local_state = new LocalState();
     }
-    insert_power(data) {
-        let nn = this.add_segment(new Power(data));
+    insert_power(content, power) {
+        let pwr = new Power(content, power);
+        let nn = this.add_segment(pwr);
         return nn;
     }
     insert_normal(str) {

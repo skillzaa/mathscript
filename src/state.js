@@ -1,10 +1,12 @@
 export default class State {
     constructor(canvas, ctx) {
         this.canvas = canvas;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
         this.ctx = ctx;
         this.x = 100;
         this.y = 100;
-        this.fontSize = 40;
+        this.fontSize = 50;
         this.fontName = "serif";
         //--need to be changed
         this.resetFont();
