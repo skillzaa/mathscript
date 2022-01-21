@@ -8,6 +8,7 @@ let canvas = document.getElementById("crown");
 let ctx = canvas.getContext('2d');
 // @ts-expect-error
 let state = new State(canvas, ctx);
+// console.log(ctx);
 // @ts-expect-error
 let g = new Grid(canvas);
 g.draw();

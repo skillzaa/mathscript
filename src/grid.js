@@ -1,6 +1,7 @@
 export default class Grid {
     constructor(canvas) {
         this.canvas = canvas;
+        //@ts-expect-error    
         this.ctx = canvas.getContext('2d');
         this.cell_width = 50;
         this.cell_height = 50;
@@ -53,6 +54,6 @@ export default class Grid {
         this.ctx.fillStyle = this.numbers_fillStyle;
         this.ctx.font = '20px serif';
         this.ctx.textBaseline = "top";
-        this.ctx.fillText(number, x, y);
+        this.ctx.fillText(number.toString(), x, y);
     }
 }

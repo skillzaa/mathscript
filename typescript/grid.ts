@@ -1,11 +1,17 @@
 
 
 export default class Grid {
+canvas:HTMLCanvasElement;    
+numbers_fillStyle:string;
+lineColor:string;
+ctx:CanvasRenderingContext2D;
+
 cell_height:number;
 cell_width:number;
 show_numbers:boolean;
-constructor (canvas){
-this.canvas = canvas;    
+constructor (canvas:HTMLCanvasElement){
+this.canvas = canvas;
+//@ts-expect-error    
 this.ctx = canvas.getContext('2d');    
 this.cell_width = 50;    
 this.cell_height = 50;
@@ -48,17 +54,17 @@ let end_y = y + height;
     x += this.cell_width;
     } while (width > x );
 }
-draw_line(move_to_x,move_to_y,line_to_x,line_to_y){
+draw_line(move_to_x:number,move_to_y:number,line_to_x:number,line_to_y:number){
 this.ctx.strokeStyle = this.lineColor;
 this.ctx.beginPath();
 this.ctx.moveTo(move_to_x, move_to_y);
 this.ctx.lineTo(line_to_x, line_to_y);
 this.ctx.stroke();
 }
-draw_number(number,x,y){
+draw_number(number:number,x:number,y:number){
 this.ctx.fillStyle = this.numbers_fillStyle;
 this.ctx.font = '20px serif';
 this.ctx.textBaseline = "top";
-this.ctx.fillText(number,x,y);
+this.ctx.fillText(number.toString(),x,y);
 }
 }
