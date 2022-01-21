@@ -24,4 +24,4 @@ segline.insert_sqrt("abcdef");
 //==============================
 eengn.add_segment(segline);
 console.log("eengn",eengn);
-eengn.draw(state);
+eengn.draw(state,state.x);

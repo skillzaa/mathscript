@@ -5,8 +5,8 @@ export default class LatMachine {
         this.segment_gap = 5;
     }
     //--function arguments shd be arguments and not classes unless required absoliutely.
-    draw(state) {
-        let local_x = state.x;
+    draw(state, starting_x = 0) {
+        let local_x = starting_x;
         for (let i = 0; i < this.segments.length; i++) {
             let delta_x = this.segments[i].draw(state, local_x);
             local_x += delta_x + this.segment_gap;
