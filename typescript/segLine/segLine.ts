@@ -7,6 +7,10 @@ import Special from "../segLineItems/special.js";
 import State from "../state.js";
 import SqrtEnd from "../segLineItems/sqrtEnd.js";
 import LocalState from "./localState.js";
+import LineTop from "../segLineItems/lineTop.js";
+import LineTopEnd from "../segLineItems/lineTopEnd.js";
+
+
 export default class SegLine extends LatMachine{
 
 constructor(){
@@ -16,6 +20,12 @@ this.local_state = new LocalState();
 
 
 
+lineTopEnd(){
+    return this.add_segment(new LineTopEnd());
+}
+lineTop(){
+    return this.add_segment(new LineTop());
+}
 power(content:string,power:string){
     let pwr = new Power(content,power);
     let nn = this.add_segment(pwr);

@@ -17,6 +17,7 @@ let segline = new SegLine();
 segline.segment_gap = 4;
 // segline.special();
 // segline.special(127801);
+segline.lineTop();
 segline.normal(" {(a+b)} = c ");
 segline.normal(" x+y = z");
 segline.power("H", "n");
@@ -25,6 +26,7 @@ segline.sqrt();
 segline.normal("aef");
 segline.power("KEW", "w");
 segline.sqrtend();
+segline.lineTopEnd();
 //==============================
 eengn.add_segment(segline);
 console.log("eengn", eengn);
