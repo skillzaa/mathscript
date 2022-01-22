@@ -28,6 +28,10 @@ export default class State {
         let m = this.ctx.measureText(chars);
         return Math.ceil(m.width);
     }
+    drawText(content = "") {
+        this.ctx.fillText(content, this.x, this.y);
+    }
+    //==============Private
     setFontSize(n) {
         this.fontSize = n;
         this.resetFont();

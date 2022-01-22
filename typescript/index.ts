@@ -1,9 +1,12 @@
 import Grid from "./grid.js";
-import EqEngine from "./eqEngine/eqengine.js";
-import SegLine from "./segLine/segLine.js";
-import State from "./state.js";
-let canvas = document.getElementById("crown");
+import State from "./design/state.js";
+import Equation from "./design/equation.js";
+import Segment from "./design/segment.js";
+import Item from "./design/item.js";
 
+
+//===========================================
+let canvas = document.getElementById("crown");
 // @ts-expect-error
 let ctx = canvas.getContext('2d');
 // @ts-expect-error
@@ -14,27 +17,13 @@ let g = new Grid(canvas);
 g.draw();
 //==================Grid Ends ================
 // --@ts-expect-error
-let eengn = new EqEngine(state);
-eengn.segment_gap = 50;
-let segline = new SegLine(state);
+let equation = new Equation(state);
+equation.segment_gap = 50;
 
-segline.segment_gap = 4;
-// segline.special();
-// segline.special(127801);
-segline.sqrt();
-segline.power("H","n");
-segline.sqrtend();
-segline.normal("+");
-// segline.power({content:"H" , power:"n" , moveup: 10});
-segline.power("KEW","w");
-
-segline.normal("+");
-segline.sqrt();
-segline.normal("a");
-segline.power("e","3");
-segline.normal("f");
-segline.sqrtend(); 
+let line = new Segment();
+let item = new Item(state, "blabla");
+line.add_item(item);;
 //==============================
-eengn.add_segment(segline);
-console.log("eengn",eengn);
-eengn.draw();
+equation.add_segment(line);
+console.log("eengn",equation);
+equation.draw();

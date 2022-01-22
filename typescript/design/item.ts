@@ -2,18 +2,22 @@ import Iitem from "./Iitem.js";
 import State from "./state.js";
 
 export default class Item implements Iitem {
-state:State; 
-constructor (state:State){
-this.state = state;  
+content:string;
+state:State;
+
+constructor (state:State,content=""){
+this.state = state;    
+this.content = content;    
 }
 width():number {
-return 0;    
+return this.state.chars_width(this.content);    
 }
 height():number {
 return this.width() * 1.5;    
 }
 
-draw(state:State):boolean{
+draw():boolean{
+this.state.drawText(this.content);    
 return true;
 }
 

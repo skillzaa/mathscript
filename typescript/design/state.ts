@@ -38,6 +38,10 @@ public chars_width(chars=""){
 let m = this.ctx.measureText(chars);
 return Math.ceil(m.width);    
 }
+public drawText(content =""){
+    this.ctx.fillText(content, this.x, this.y);
+}
+//==============Private
 private setFontSize(n:number){
     this.fontSize = n;
     this.resetFont();

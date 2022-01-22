@@ -11,6 +11,7 @@ export default class State {
     addY(n: number): void;
     getFontSize(): number;
     chars_width(chars?: string): number;
+    drawText(content?: string): void;
     private setFontSize;
     private setFontName;
     private restoreCtx;
