@@ -1,0 +1,1 @@
+{"version":3,"file":"segmentItem.d.ts","sourceRoot":"","sources":["../../typescript/design/segmentItem.ts"],"names":[],"mappings":"AAAA,OAAO,QAAQ,MAAM,2BAA2B,CAAC;AACjD,OAAO,KAAK,MAAM,aAAa,CAAC;AAGhC,MAAM,CAAC,OAAO,OAAO,UAAW,YAAW,QAAQ;IACnD,KAAK,EAAC,KAAK,CAAC;gBACC,KAAK,EAAC,KAAK;IAGxB,KAAK,IAAG,MAAM;IAGd,MAAM,IAAG,MAAM;IAIf,IAAI,CAAC,KAAK,EAAC,KAAK,GAAE,OAAO;CAIxB"}
