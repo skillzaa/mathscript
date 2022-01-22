@@ -23,7 +23,7 @@ this.lat_height = 0 ;
 draw():boolean{
     for (let i = 0; i < this.segments.length; i++) {
         //-----save state ctx here
-        this.state.resetFont();
+        // this.state.resetFont();
         this.state.ctx.save();
         
         let tf = this.segments[i].draw(this.state,this.local_state);

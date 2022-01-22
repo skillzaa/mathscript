@@ -11,7 +11,7 @@ export default class LatMachine {
     draw() {
         for (let i = 0; i < this.segments.length; i++) {
             //-----save state ctx here
-            this.state.resetFont();
+            // this.state.resetFont();
             this.state.ctx.save();
             let tf = this.segments[i].draw(this.state, this.local_state);
             //-----restore state ctx here

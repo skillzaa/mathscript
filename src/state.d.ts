@@ -12,7 +12,7 @@ export default class State {
     setFontName(n: string): void;
     restoreCtx(): void;
     saveCtx(): void;
-    resetFont(): void;
+    private resetFont;
     getFont(): string;
     addX(n: number): void;
     addY(n: number): void;

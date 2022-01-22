@@ -21,7 +21,6 @@ this.state.setFontSize(start_font_size/2);
 let power_measur = this.state.ctx.measureText(this.power);
 //--now reset
 this.state.setFontSize(start_font_size);
-this.state.resetFont();
 //------------------------------
 
 return Math.ceil(power_measur.width + content_width);        

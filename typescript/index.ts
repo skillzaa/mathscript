@@ -22,8 +22,6 @@ segline.segment_gap = 4;
 // segline.special();
 // segline.special(127801);
 segline.lineBot();
-segline.normal(" {(a+b)} = c ");
-segline.normal(" x+y = z");
 segline.power("H","n");
 // segline.power({content:"H" , power:"n" , moveup: 10});
 segline.sqrt(); 

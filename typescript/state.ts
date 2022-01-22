@@ -41,7 +41,7 @@ restoreCtx(){
 saveCtx(){
     this.ctx.save();
 }
-resetFont(){
+private resetFont(){
     this.ctx.font = this.fontSize + "px " + this.fontName;
 }
 getFont():string{
@@ -60,4 +60,5 @@ canvas_width():number{
 canvas_height():number{
     return this.canvas.height;
 }
+
 }
