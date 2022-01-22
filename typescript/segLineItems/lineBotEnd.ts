@@ -3,7 +3,7 @@ import State from "../state.js";
 import LocalState from "../segLine/localState.js";
 
 
-export default class LineTopEnd implements ISegment {
+export default class LineBotEnd implements ISegment {
 constructor (){
 
 }
@@ -13,7 +13,7 @@ draw(state:State,local_x:number,local_state:LocalState):number{
     state.ctx.strokeStyle = "red";
     state.ctx.beginPath();
 
-    state.ctx.moveTo(local_state.line_top_startX,local_state.line_top_startY);
+    state.ctx.moveTo(local_state.line_bot_startX,local_state.line_bot_startY);
     state.ctx.lineTo(local_x , state.y);
     state.ctx.stroke();
  return 0;   

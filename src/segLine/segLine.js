@@ -7,10 +7,18 @@ import SqrtEnd from "../segLineItems/sqrtEnd.js";
 import LocalState from "./localState.js";
 import LineTop from "../segLineItems/lineTop.js";
 import LineTopEnd from "../segLineItems/lineTopEnd.js";
+import LineBot from "../segLineItems/lineBot.js";
+import LineBotEnd from "../segLineItems/lineBotEnd.js";
 export default class SegLine extends LatMachine {
     constructor() {
         super();
         this.local_state = new LocalState();
+    }
+    lineBotEnd() {
+        return this.add_segment(new LineBotEnd());
+    }
+    lineBot() {
+        return this.add_segment(new LineBot());
     }
     lineTopEnd() {
         return this.add_segment(new LineTopEnd());

@@ -1,6 +1,8 @@
 import LatMachine from "../latMachine/latMachine.js";
 export default class SegLine extends LatMachine {
     constructor();
+    lineBotEnd(): import("../latMachine/Isegment.js").default;
+    lineBot(): import("../latMachine/Isegment.js").default;
     lineTopEnd(): import("../latMachine/Isegment.js").default;
     lineTop(): import("../latMachine/Isegment.js").default;
     power(content: string, power: string): import("../latMachine/Isegment.js").default;
