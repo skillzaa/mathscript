@@ -12,51 +12,51 @@ import LineBot from "../segLineItems/lineBot.js";
 import LineBotEnd from "../segLineItems/lineBotEnd.js";
 
 
-export default class SegLine extends LatMachine{
+export default class SegLine extends LatMachine {
+protected local_state:LocalState;
 
-constructor(){
-super();
+constructor(state:State){
+super(state);
 this.local_state = new LocalState();
 }
 
 
-
 lineBotEnd(){
-    return this.add_segment(new LineBotEnd());
+    return this.add_segment(new LineBotEnd(this.state));
 }
 lineBot(){
-    return this.add_segment(new LineBot());
+    return this.add_segment(new LineBot(this.state));
 }
 
 lineTopEnd(){
-    return this.add_segment(new LineTopEnd());
+    return this.add_segment(new LineTopEnd(this.state));
 }
 lineTop(){
-    return this.add_segment(new LineTop());
+    return this.add_segment(new LineTop(this.state));
 }
 power(content:string,power:string){
-    let pwr = new Power(content,power);
+    let pwr = new Power(this.state,content,power);
     let nn = this.add_segment(pwr);
 return nn;
 }
 
 normal(str:string){
-    let n = new Normal(str);
+    let n = new Normal(this.state,str);
     let nn = this.add_segment(n);
     return nn;
 }
 sqrtend() {
-    let n = new SqrtEnd();
+    let n = new SqrtEnd(this.state);
     let nn = this.add_segment(n);
     return nn;
 }
 sqrt(){
-    let n = new Sqrt();
+    let n = new Sqrt(this.state);
     let nn = this.add_segment(n);
     return nn;
 }
 special(n:number=128103){
-    let special = new Special(n);
+    let special = new Special(this.state,n);
     return this.add_segment(special);
 }
 

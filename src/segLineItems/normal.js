@@ -1,16 +1,18 @@
-export default class Normal {
-    constructor(content) {
+import SegItemAbs from "./SegItemAbs.js";
+export default class Normal extends SegItemAbs {
+    constructor(state, content) {
+        super(state);
         this.content = content;
     }
     width() {
-        return 0;
+        let m = this.state.ctx.measureText(this.content);
+        return m.width;
     }
     height() {
-        return 0;
+        return this.width() * 1.25;
     }
-    draw(state, starting_x) {
-        state.ctx.fillText(this.content, starting_x, state.y);
-        let m = state.ctx.measureText(this.content);
-        return m.width;
+    draw(state, local_state) {
+        this.state.ctx.fillText(this.content, state.x, this.state.y);
+        return true;
     }
 }

@@ -1,45 +1,51 @@
 import ISegment from "./Isegment.js";
 import State from "../state.js";
-// import LocalData from "./local_data.js";
 
-export default class LatMachine implements ISegment{
+export default class LatMachine {
 
-private segments:ISegment[] =[];
+protected segments:ISegment[] =[];
+public segment_gap:number;
+protected state:State;
+protected local_state:{};
+
 private lat_width:number;
 private lat_height:number;
-public segment_gap:number;
-protected local_state:{};
-constructor (){
+
+constructor (state:State){
+this.state = state;
+this.local_state = {};
 this.segments = [];  
 this.segment_gap = 2;
 this.lat_width = 0 ;
 this.lat_height = 0 ;
-this.local_state = {};
 } 
 
-width(): number {
+draw():boolean{
+    for (let i = 0; i < this.segments.length; i++) {
+        //-----save state ctx here
+        this.state.resetFont();
+        this.state.ctx.save();
+        
+        let tf = this.segments[i].draw(this.state,this.local_state);
+        //-----restore state ctx here
+        this.state.ctx.restore();
+        //--there may be control segments which may not move the x in that case dont add gap
+        if (this.segments[i].width() > 0){
+           this.state.x += this.segments[i].width() + this.segment_gap;
+        }
+}
+return true;
+}
+
+//=====================
+width():number {
     return this.lat_width;
 }
-height(): number {
+height():number {
     return this.lat_height;
 }
 //--function arguments shd be concrete data types and not classes / objects unless required absoliutely.
-draw(state:State,starting_x:number=0,local_data={}):number{    
-let local_x = starting_x;    
-for (let i = 0; i < this.segments.length; i++) {
-        //-----save state ctx here
-        state.resetFont();
-        state.ctx.save();
-        let delta_x = this.segments[i].draw(state,local_x,this.local_state);
-        //-----restore state ctx here
-        state.ctx.restore();
-        //--there may be control segments which may not move the x in that case dont add gap
-        if (delta_x > 0){
-           local_x += delta_x + this.segment_gap;
-        }
-}
-return local_x;
-}
+
 
 //--so a lat machine can always get segments from outside as long as they complyby ISegment interface
 add_segment(segment:ISegment){

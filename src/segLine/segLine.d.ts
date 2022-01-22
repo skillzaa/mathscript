@@ -1,6 +1,9 @@
 import LatMachine from "../latMachine/latMachine.js";
+import State from "../state.js";
+import LocalState from "./localState.js";
 export default class SegLine extends LatMachine {
-    constructor();
+    protected local_state: LocalState;
+    constructor(state: State);
     lineBotEnd(): import("../latMachine/Isegment.js").default;
     lineBot(): import("../latMachine/Isegment.js").default;
     lineTopEnd(): import("../latMachine/Isegment.js").default;

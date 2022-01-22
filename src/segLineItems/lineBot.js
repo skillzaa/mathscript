@@ -1,18 +1,12 @@
-export default class LineBot {
-    // protected state:State;    
-    constructor() {
-        // this.state = state;    
+import SegItemAbs from "./SegItemAbs.js";
+export default class LineBot extends SegItemAbs {
+    constructor(state) {
+        super(state);
     }
-    width() {
-        return 0;
-    }
-    height() {
-        return 0;
-    }
-    draw(state, local_x, local_state) {
+    draw(state, local_state) {
         //=====add to local state
-        local_state.line_bot_startX = local_x;
-        local_state.line_bot_startY = state.y;
-        return 0;
+        local_state.line_bot_startX = state.x;
+        local_state.line_bot_startY = this.state.y;
+        return true;
     }
 } //sqrt    

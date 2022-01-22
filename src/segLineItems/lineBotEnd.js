@@ -1,18 +1,14 @@
-export default class LineBotEnd {
-    constructor() {
+import SegItemAbs from "./SegItemAbs.js";
+export default class LineBotEnd extends SegItemAbs {
+    constructor(state) {
+        super(state);
     }
-    width() {
-        return 0;
-    }
-    height() {
-        return 0;
-    }
-    draw(state, local_x, local_state) {
-        state.ctx.strokeStyle = "red";
-        state.ctx.beginPath();
-        state.ctx.moveTo(local_state.line_bot_startX, local_state.line_bot_startY);
-        state.ctx.lineTo(local_x, state.y);
-        state.ctx.stroke();
-        return 0;
+    draw(state, local_state) {
+        this.state.ctx.strokeStyle = "red";
+        this.state.ctx.beginPath();
+        this.state.ctx.moveTo(local_state.line_bot_startX, local_state.line_bot_startY);
+        this.state.ctx.lineTo(state.x, this.state.y);
+        this.state.ctx.stroke();
+        return true;
     }
 } //sqrt    

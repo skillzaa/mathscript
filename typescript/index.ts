@@ -14,9 +14,9 @@ let state= new State(canvas,ctx);
 let g = new Grid(canvas);
 g.draw();
 
-let eengn = new EqEngine();
+let eengn = new EqEngine(state);
 eengn.segment_gap = 50;
-let segline = new SegLine();
+let segline = new SegLine(state);
 
 segline.segment_gap = 4;
 // segline.special();
@@ -34,4 +34,4 @@ segline.lineBotEnd();
 //==============================
 eengn.add_segment(segline);
 console.log("eengn",eengn);
-eengn.draw(state,state.x);
+eengn.draw();

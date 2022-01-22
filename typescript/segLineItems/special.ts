@@ -1,19 +1,17 @@
 import ISegment from "../latMachine/Isegment.js";
+import LocalState from "../segLine/localState.js";
 import State from "../state.js";
+import SegItemAbs from "./SegItemAbs.js";
 
-export default class Special implements ISegment {
+export default class Special extends SegItemAbs implements ISegment {
     content:number; 
-constructor (content= 128103){
+constructor (state:State,content= 128103){
+super(state);
+        
 this.content = content;  
 }
 
-width():number {
-return 0;    
-}
-height():number {
-return 0;    
-}
-draw(state:State,local_x:number):number{
+draw(state:State, local_state:LocalState):boolean{
 
     // strokeText("\u{1D120}", 10, 50);
     // let ccc = "{" + this.content + "}";
@@ -24,13 +22,10 @@ draw(state:State,local_x:number):number{
 
 // this.state.ctx.fillText(String.fromCodePoint(parseInt(this.content,16)),this.state.x, this.state.y);
 // this.state.ctx.fillText(String.fromCodePoint(55358, 56614),this.state.x, this.state.y);
-state.ctx.fillText(String.fromCodePoint(this.content),local_x, state.y);
+this.state.ctx.fillText(String.fromCodePoint(this.content),state.x, this.state.y);
 
-let width = state.ctx.measureText(this.content.toString()).width;
-return width;
-// fromCharCode(55358, 56614)
-// this.state.ctx.fillText(String.fromCodePoint(parseInt("2122", 16)),this.state.x, this.state.y);
-// this.state.ctx.fillText(this.content, 
+let width = this.state.ctx.measureText(this.content.toString()).width;
+return true;
 }
 
 }

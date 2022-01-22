@@ -1,11 +1,12 @@
 import ISegment from "../latMachine/Isegment.js";
 import State from "../state.js";
 import LocalState from "../segLine/localState.js";
+import SegItemAbs from "./SegItemAbs.js";
 
 
-export default class LineTopEnd implements ISegment {
-constructor (){
-
+export default class LineTopEnd extends SegItemAbs implements ISegment {
+constructor(state:State){
+super(state);
 }
 width():number {
 return 0;    
@@ -13,15 +14,15 @@ return 0;
 height():number {
 return 0;    
 }
-draw(state:State,local_x:number,local_state:LocalState):number{
+draw(state:State,local_state:LocalState):boolean{
   
-    state.ctx.strokeStyle = "red";
-    state.ctx.beginPath();
+    this.state.ctx.strokeStyle = "red";
+    this.state.ctx.beginPath();
 
-    state.ctx.moveTo(local_state.line_top_startX,local_state.line_top_startY);
-    state.ctx.lineTo(local_x , state.y);
-    state.ctx.stroke();
- return 0;   
+    this.state.ctx.moveTo(local_state.line_top_startX,local_state.line_top_startY);
+    this.state.ctx.lineTo(state.x , this.state.y);
+    this.state.ctx.stroke();
+    return true;
 }
 }//sqrt    
 

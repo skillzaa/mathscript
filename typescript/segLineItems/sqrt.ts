@@ -1,10 +1,11 @@
 import ISegment from "../latMachine/Isegment.js";
 import State from "../state.js";
 import LocalState from "../segLine/localState.js";
+import SegItemAbs from "./SegItemAbs.js";
 
-export default class Sqrt implements ISegment {
-constructor(){
-    
+export default class Sqrt extends SegItemAbs implements ISegment {
+constructor(state:State){
+super(state);
 }  
 width():number {
 return 0;    
@@ -12,19 +13,17 @@ return 0;
 height():number {
 return 0;    
 }   
-draw(state:State,local_x:number,local_state:LocalState):number{
+draw(state:State,local_state:LocalState):boolean{
     // state.ctx.font = '50px serif';  
-    state.ctx.fillText(String.fromCodePoint(8730),local_x,state.y);
+    this.state.ctx.fillText(String.fromCodePoint(8730),state.x,this.state.y);
 
-    let sqrt_width = state.ctx.measureText(String.fromCodePoint(8730)).width;
-
-    // let content_width = state.ctx.measureText(this.content).width;
+    let sqrt_width = this.state.ctx.measureText(String.fromCodePoint(8730)).width;
 
     //=====add to local state
-    local_state.sqrt_startX = local_x + sqrt_width;
-    local_state.sqrt_startY = state.y;
+    local_state.sqrt_startX = state.x + sqrt_width;
+    local_state.sqrt_startY = this.state.y;
     // state.ctx.restore();
- return sqrt_width;   
+    return true;
 }
 }//sqrt    
 

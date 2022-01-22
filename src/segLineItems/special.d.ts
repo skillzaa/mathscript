@@ -1,10 +1,10 @@
 import ISegment from "../latMachine/Isegment.js";
+import LocalState from "../segLine/localState.js";
 import State from "../state.js";
-export default class Special implements ISegment {
+import SegItemAbs from "./SegItemAbs.js";
+export default class Special extends SegItemAbs implements ISegment {
     content: number;
-    constructor(content?: number);
-    width(): number;
-    height(): number;
-    draw(state: State, local_x: number): number;
+    constructor(state: State, content?: number);
+    draw(state: State, local_state: LocalState): boolean;
 }
 //# sourceMappingURL=special.d.ts.map

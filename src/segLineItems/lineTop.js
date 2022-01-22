@@ -1,5 +1,7 @@
-export default class LineTop {
-    constructor() {
+import SegItemAbs from "./SegItemAbs.js";
+export default class LineTop extends SegItemAbs {
+    constructor(state) {
+        super(state);
     }
     width() {
         return 0;
@@ -7,10 +9,10 @@ export default class LineTop {
     height() {
         return 0;
     }
-    draw(state, local_x, local_state) {
+    draw(state, local_state) {
         //=====add to local state
-        local_state.line_top_startX = local_x;
-        local_state.line_top_startY = state.y;
-        return 0;
+        local_state.line_top_startX = state.x;
+        local_state.line_top_startY = this.state.y;
+        return true;
     }
 } //sqrt    

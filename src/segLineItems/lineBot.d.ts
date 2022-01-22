@@ -1,10 +1,9 @@
 import ISegment from "../latMachine/Isegment.js";
 import State from "../state.js";
 import LocalState from "../segLine/localState.js";
-export default class LineBot implements ISegment {
-    constructor();
-    width(): number;
-    height(): number;
-    draw(state: State, local_x: number, local_state: LocalState): number;
+import SegItemAbs from "./SegItemAbs.js";
+export default class LineBot extends SegItemAbs implements ISegment {
+    constructor(state: State);
+    draw(state: State, local_state: LocalState): boolean;
 }
 //# sourceMappingURL=lineBot.d.ts.map
