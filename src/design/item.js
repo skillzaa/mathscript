@@ -4,13 +4,12 @@ export default class Item {
         this.content = content;
     }
     width() {
-        return this.state.chars_width(this.content);
+        return 0;
     }
     height() {
-        return this.width() * 1.5;
+        return 0;
     }
     draw() {
-        this.state.drawText(this.content);
         return true;
     }
 }

@@ -10,14 +10,13 @@ this.state = state;
 this.content = content;    
 }
 width():number {
-return this.state.chars_width(this.content);    
+return 0;    
 }
 height():number {
-return this.width() * 1.5;    
+return 0;    
 }
 
 draw():boolean{
-this.state.drawText(this.content);    
 return true;
 }
 

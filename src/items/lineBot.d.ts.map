@@ -1,0 +1,1 @@
+{"version":3,"file":"lineBot.d.ts","sourceRoot":"","sources":["../../typescript/items/lineBot.ts"],"names":[],"mappings":"AAAA,OAAO,IAAI,MAAM,mBAAmB,CAAC;AACrC,OAAO,KAAK,MAAM,oBAAoB,CAAC;AAGvC,MAAM,CAAC,OAAO,OAAO,OAAQ,SAAQ,IAAI;gBAC7B,KAAK,EAAC,KAAK;IAGvB,IAAI,IAAG,OAAO;CAQb"}

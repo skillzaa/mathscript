@@ -1,7 +1,7 @@
 import Grid from "./grid.js";
 import EqEngine from "./eqEngine/eqengine.js";
 import SegLine from "./segLine/segLine.js";
-import State from "./state.js";
+import State from "./state-old.js";
 let canvas = document.getElementById("crown");
 // @ts-expect-error
 let ctx = canvas.getContext('2d');

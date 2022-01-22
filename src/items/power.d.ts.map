@@ -1,0 +1,1 @@
+{"version":3,"file":"power.d.ts","sourceRoot":"","sources":["../../typescript/items/power.ts"],"names":[],"mappings":"AAAA,OAAO,IAAI,MAAM,mBAAmB,CAAC;AACrC,OAAO,KAAK,MAAM,oBAAoB,CAAC;AAGvC,MAAM,CAAC,OAAO,OAAO,KAAM,SAAQ,IAAI;IACvC,OAAO,CAAC,KAAK,CAAQ;gBACT,KAAK,EAAC,KAAK,EAAC,OAAO,SAAI,EAAC,KAAK,SAAI;IAI7C,KAAK,IAAI,MAAM;IAQf,IAAI,IAAG,OAAO;CAQb"}

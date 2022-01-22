@@ -10,6 +10,9 @@ export default class Equation {
     }
     draw() {
         for (let i = 0; i < this.segments.length; i++) {
+            //----load next seg to state
+            this.state.load_current_seg(this.segments[i].width(), this.segments[i].height());
+            //----draw operation
             let tf = this.segments[i].draw(this.state);
             //--there may be control segments which may not move the x in that case dont add gap
             if (this.segments[i].width() > 0) {

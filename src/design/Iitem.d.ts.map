@@ -1,1 +1,1 @@
-{"version":3,"file":"Iitem.d.ts","sourceRoot":"","sources":["../../typescript/design/Iitem.ts"],"names":[],"mappings":"AAGA,MAAM,CAAC,OAAO,WAAW,KAAK;IAE1B,KAAK,IAAG,MAAM,CAAC;IACf,MAAM,IAAG,MAAM,CAAC;IAChB,IAAI,IAAG,OAAO,CAAC;CAClB"}
+{"version":3,"file":"Iitem.d.ts","sourceRoot":"","sources":["../../typescript/design/Iitem.ts"],"names":[],"mappings":"AAGA,MAAM,CAAC,OAAO,WAAW,KAAK;IAC1B,KAAK,IAAG,MAAM,CAAC;IACf,MAAM,IAAG,MAAM,CAAC;IAChB,IAAI,IAAG,OAAO,CAAC;CAClB"}

@@ -16,4 +16,4 @@ export default class State {
     canvas_width(): number;
     canvas_height(): number;
 }
-//# sourceMappingURL=state.d.ts.map
+//# sourceMappingURL=state-old.d.ts.map
