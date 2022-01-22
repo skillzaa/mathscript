@@ -8,10 +8,10 @@ constructor(state:State){
 super(state);
 }  
 width():number {
-return 0;    
+return  this.state.ctx.measureText(String.fromCodePoint(8730)).width; 
 }
 height():number {
-return 0;    
+return this.width() * 1.5;   
 }   
 draw(state:State,local_state:LocalState):boolean{
     // state.ctx.font = '50px serif';  

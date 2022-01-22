@@ -4,10 +4,10 @@ export default class Sqrt extends SegItemAbs {
         super(state);
     }
     width() {
-        return 0;
+        return this.state.ctx.measureText(String.fromCodePoint(8730)).width;
     }
     height() {
-        return 0;
+        return this.width() * 1.5;
     }
     draw(state, local_state) {
         // state.ctx.font = '50px serif';  

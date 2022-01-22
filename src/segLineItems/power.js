@@ -22,6 +22,8 @@ export default class Power extends SegItemAbs {
         let content_width = this.state.ctx.measureText(this.content).width;
         this.state.setFontSize(start_font_size / 2);
         this.state.ctx.fillText(this.power, state.x + content_width, this.state.y - this.moveup);
+        //--must set font size back;
+        this.state.setFontSize(start_font_size);
         return true;
     }
 }

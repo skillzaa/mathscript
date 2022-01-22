@@ -29,6 +29,7 @@ draw():boolean{
         let tf = this.segments[i].draw(this.state,this.local_state);
         //-----restore state ctx here
         this.state.ctx.restore();
+        this.state.ctx.font = "50px serif";
         //--there may be control segments which may not move the x in that case dont add gap
         if (this.segments[i].width() > 0){
            this.state.x += this.segments[i].width() + this.segment_gap;

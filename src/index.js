@@ -7,24 +7,29 @@ let canvas = document.getElementById("crown");
 let ctx = canvas.getContext('2d');
 // @ts-expect-error
 let state = new State(canvas, ctx);
-// console.log(ctx);
 // @ts-expect-error
 let g = new Grid(canvas);
 g.draw();
+//==================Grid Ends ================
+// --@ts-expect-error
 let eengn = new EqEngine(state);
 eengn.segment_gap = 50;
 let segline = new SegLine(state);
 segline.segment_gap = 4;
 // segline.special();
 // segline.special(127801);
-segline.lineBot();
-segline.power("H", "n");
-// segline.power({content:"H" , power:"n" , moveup: 10});
 segline.sqrt();
-segline.normal("aef");
-segline.power("KEW", "w");
+segline.power("H", "n");
 segline.sqrtend();
-segline.lineBotEnd();
+segline.normal("+");
+// segline.power({content:"H" , power:"n" , moveup: 10});
+segline.power("KEW", "w");
+segline.normal("+");
+segline.sqrt();
+segline.normal("a");
+segline.power("e", "3");
+segline.normal("f");
+segline.sqrtend();
 //==============================
 eengn.add_segment(segline);
 console.log("eengn", eengn);
