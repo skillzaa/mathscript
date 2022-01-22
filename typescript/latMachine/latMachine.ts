@@ -29,6 +29,7 @@ for (let i = 0; i < this.segments.length; i++) {
 }
 return local_x;
 }
+
 //--so a lat machine can always get segments from outside as long as they complyby ISegment interface
 add_segment(segment:ISegment){
 this.segments.push(segment);
