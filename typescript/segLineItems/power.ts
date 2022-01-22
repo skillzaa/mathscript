@@ -1,8 +1,6 @@
 import ISegment from "../latMachine/Isegment.js";
 import State from "../state.js";
 
-import {power_data} from "../app_data/power_data.js";
-
 export default class Power implements ISegment {
 private content:string;
 private power:string;
@@ -13,7 +11,12 @@ this.content = content;
 this.power = power;
 this.moveup = 5;
 }
-
+width():number {
+return 0;    
+}
+height():number {
+return 0;    
+}
 
 draw(state:State,local_x:number):number{
 // state.ctx.save();

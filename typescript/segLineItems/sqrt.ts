@@ -5,7 +5,13 @@ import LocalState from "../segLine/localState.js";
 export default class Sqrt implements ISegment {
 constructor(){
     
-}     
+}  
+width():number {
+return 0;    
+}
+height():number {
+return 0;    
+}   
 draw(state:State,local_x:number,local_state:LocalState):number{
     // state.ctx.font = '50px serif';  
     state.ctx.fillText(String.fromCodePoint(8730),local_x,state.y);

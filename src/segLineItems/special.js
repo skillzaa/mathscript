@@ -2,6 +2,12 @@ export default class Special {
     constructor(content = 128103) {
         this.content = content;
     }
+    width() {
+        return 0;
+    }
+    height() {
+        return 0;
+    }
     draw(state, local_x) {
         // strokeText("\u{1D120}", 10, 50);
         // let ccc = "{" + this.content + "}";

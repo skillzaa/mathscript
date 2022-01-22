@@ -7,7 +7,12 @@ export default class SqrtEnd implements ISegment {
 constructor (){
 
 }
-
+width():number {
+return 0;    
+}
+height():number {
+return 0;    
+}
 draw(state:State,local_x:number,local_state:LocalState):number{
   
     state.ctx.strokeStyle = "red";

@@ -7,7 +7,12 @@ constructor (content= 128103){
 this.content = content;  
 }
 
-
+width():number {
+return 0;    
+}
+height():number {
+return 0;    
+}
 draw(state:State,local_x:number):number{
 
     // strokeText("\u{1D120}", 10, 50);

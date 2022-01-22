@@ -1,6 +1,12 @@
 export default class Sqrt {
     constructor() {
     }
+    width() {
+        return 0;
+    }
+    height() {
+        return 0;
+    }
     draw(state, local_x, local_state) {
         // state.ctx.font = '50px serif';  
         state.ctx.fillText(String.fromCodePoint(8730), local_x, state.y);

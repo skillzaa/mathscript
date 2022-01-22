@@ -5,6 +5,8 @@ export default class Power implements ISegment {
     private power;
     moveup: number;
     constructor(content?: string, power?: string);
+    width(): number;
+    height(): number;
     draw(state: State, local_x: number): number;
 }
 //# sourceMappingURL=power.d.ts.map

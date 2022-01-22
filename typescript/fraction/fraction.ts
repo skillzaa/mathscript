@@ -11,7 +11,12 @@ this.upper = upper;
 this.lower = lower;  
 this.divider = true;
 }
-
+width():number {
+return 0;    
+}
+height():number {
+return 0;    
+}
 
 draw(state:State,starting_x:number):number{
 this.upper.draw(state,starting_x);   

@@ -1,6 +1,5 @@
 import LatMachine from "../latMachine/latMachine.js";
 import Power from "../segLineItems/power.js";
-import {power_data} from "../app_data/power_data.js";
 import Normal from "../segLineItems/normal.js";
 import Sqrt from "../segLineItems/sqrt.js";
 import Special from "../segLineItems/special.js";

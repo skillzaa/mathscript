@@ -4,6 +4,12 @@ export default class Fraction {
         this.lower = lower;
         this.divider = true;
     }
+    width() {
+        return 0;
+    }
+    height() {
+        return 0;
+    }
     draw(state, starting_x) {
         this.upper.draw(state, starting_x);
         //---widths 

@@ -5,13 +5,24 @@ import State from "../state.js";
 export default class LatMachine implements ISegment{
 
 private segments:ISegment[] =[];
+private lat_width:number;
+private lat_height:number;
 public segment_gap:number;
 protected local_state:{};
 constructor (){
 this.segments = [];  
 this.segment_gap = 2;
+this.lat_width = 0 ;
+this.lat_height = 0 ;
 this.local_state = {};
 } 
+
+width(): number {
+    return this.lat_width;
+}
+height(): number {
+    return this.lat_height;
+}
 //--function arguments shd be concrete data types and not classes / objects unless required absoliutely.
 draw(state:State,starting_x:number=0,local_data={}):number{    
 let local_x = starting_x;    
@@ -32,6 +43,10 @@ return local_x;
 
 //--so a lat machine can always get segments from outside as long as they complyby ISegment interface
 add_segment(segment:ISegment){
+this.lat_width += segment.width();   
+if (segment.height() > this.lat_height){
+        this.lat_height = segment.height();
+}     
 this.segments.push(segment);
 return segment;
 }

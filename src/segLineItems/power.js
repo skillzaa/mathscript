@@ -4,6 +4,12 @@ export default class Power {
         this.power = power;
         this.moveup = 5;
     }
+    width() {
+        return 0;
+    }
+    height() {
+        return 0;
+    }
     draw(state, local_x) {
         // state.ctx.save();
         const start_font_size = state.getFontSize();

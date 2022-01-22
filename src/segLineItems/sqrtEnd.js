@@ -1,6 +1,12 @@
 export default class SqrtEnd {
     constructor() {
     }
+    width() {
+        return 0;
+    }
+    height() {
+        return 0;
+    }
     draw(state, local_x, local_state) {
         state.ctx.strokeStyle = "red";
         state.ctx.beginPath();
