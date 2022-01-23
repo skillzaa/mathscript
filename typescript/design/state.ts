@@ -44,6 +44,14 @@ public draw_line_bot(){
     this.ctx.lineTo(this.x ,this.current_seg.line_bot_startY);
     this.ctx.stroke();
 }
+public draw_line(startX:number,startY:number,endX:number,endY:number){
+    //------------------------
+    this.ctx.strokeStyle = "red";
+    this.ctx.beginPath();
+    this.ctx.moveTo(startX,startY);
+    this.ctx.lineTo(endX,endY);
+    this.ctx.stroke();
+}
 public set_bot_line_mid(){
     this.current_seg.line_bot_width = this.x - this.current_seg.line_bot_startX;
     this.current_seg.line_bot_mid_X = this.x + this.current_seg.line_bot_width;
@@ -86,7 +94,7 @@ let m = this.ctx.measureText(chars).width;
 this.ctx.restore();
 return Math.ceil(m);    
 }
-public drawText(content ="",fontSize= this.fontSize,x=0,y=0){
+public drawText(content ="",x=0,y=0,fontSize= this.fontSize){
     this.ctx.save()
     //dont miss gap "px_"
     let f = fontSize + "px " + this.fontName;

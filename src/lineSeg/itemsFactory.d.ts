@@ -5,6 +5,8 @@ import LineTop from "./lineTop.js";
 import LineTopEnd from "./lineTopEnd.js";
 import LineBot from "./lineBot.js";
 import LineBotEnd from "./lineBotEnd.js";
+import Sqrt from "./sqrt.js";
+import SqrtEnd from "./sqrtEnd.js";
 import IDrawable from "../design/IDrawable.js";
 export default class ItemsFactory {
     private state;
@@ -16,5 +18,7 @@ export default class ItemsFactory {
     linetopEnd(): LineTopEnd;
     lineBot(): LineBot;
     lineBotEnd(): LineBotEnd;
+    sqrt(): Sqrt;
+    sqrtEnd(): SqrtEnd;
 }
 //# sourceMappingURL=itemsFactory.d.ts.map

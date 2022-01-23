@@ -4,6 +4,8 @@ import LineTop from "./lineTop.js";
 import LineTopEnd from "./lineTopEnd.js";
 import LineBot from "./lineBot.js";
 import LineBotEnd from "./lineBotEnd.js";
+import Sqrt from "./sqrt.js";
+import SqrtEnd from "./sqrtEnd.js";
 //--Just provide the item with default settings
 export default class ItemsFactory {
     constructor(state, add_new_item_fn) {
@@ -42,6 +44,16 @@ export default class ItemsFactory {
     }
     lineBotEnd() {
         let i = new LineBotEnd(this.state);
+        this.add_new_item_fn(i);
+        return i;
+    }
+    sqrt() {
+        let i = new Sqrt(this.state);
+        this.add_new_item_fn(i);
+        return i;
+    }
+    sqrtEnd() {
+        let i = new SqrtEnd(this.state);
         this.add_new_item_fn(i);
         return i;
     }

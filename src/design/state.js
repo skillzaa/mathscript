@@ -34,6 +34,14 @@ export default class State {
         this.ctx.lineTo(this.x, this.current_seg.line_bot_startY);
         this.ctx.stroke();
     }
+    draw_line(startX, startY, endX, endY) {
+        //------------------------
+        this.ctx.strokeStyle = "red";
+        this.ctx.beginPath();
+        this.ctx.moveTo(startX, startY);
+        this.ctx.lineTo(endX, endY);
+        this.ctx.stroke();
+    }
     set_bot_line_mid() {
         this.current_seg.line_bot_width = this.x - this.current_seg.line_bot_startX;
         this.current_seg.line_bot_mid_X = this.x + this.current_seg.line_bot_width;
@@ -75,7 +83,7 @@ export default class State {
         this.ctx.restore();
         return Math.ceil(m);
     }
-    drawText(content = "", fontSize = this.fontSize, x = 0, y = 0) {
+    drawText(content = "", x = 0, y = 0, fontSize = this.fontSize) {
         this.ctx.save();
         //dont miss gap "px_"
         let f = fontSize + "px " + this.fontName;
