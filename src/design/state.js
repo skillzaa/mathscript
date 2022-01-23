@@ -39,11 +39,25 @@ export default class State {
         this.current_seg.width = width;
         this.current_seg.height = height;
     }
+    //--deprecated-23-jan-2022
     addX(n) {
         this.x = this.x + n;
     }
+    incX(n) {
+        this.x = this.x + n;
+    }
+    decX(n) {
+        this.x = this.x - n;
+    }
+    //--depricated 23-jan-2022
     addY(n) {
         this.y = this.y + n;
+    }
+    incY(n) {
+        this.y = this.y + n;
+    }
+    decY(n) {
+        this.y = this.y - n;
     }
     getFontSize() {
         return this.fontSize;

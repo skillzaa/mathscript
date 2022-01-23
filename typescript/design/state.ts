@@ -49,11 +49,25 @@ public load_current_seg(width:number,height:number){
     this.current_seg.width = width;
     this.current_seg.height = height;
 }
+//--deprecated-23-jan-2022
 public addX(n:number){
     this.x = this.x + n;
 }
+public incX(n:number){
+    this.x = this.x + n;
+}
+public decX(n:number){
+    this.x = this.x - n;
+}
+//--depricated 23-jan-2022
 public addY(n:number){
     this.y = this.y + n;
+}
+public incY(n:number){
+    this.y = this.y + n;
+}
+public decY(n:number){
+    this.y = this.y - n;
 }
 public getFontSize(){
     return this.fontSize;

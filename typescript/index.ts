@@ -2,6 +2,7 @@ import Grid from "./grid.js";
 import State from "./design/state.js";
 import Equation from "./design/equation.js";
 import LineSeg from "./lineSeg/lineSeg.js";
+import Frac from "./frac/frac.js";
 //===========================================
 let canvas = document.getElementById("crown");
 // @ts-expect-error
@@ -16,7 +17,6 @@ g.draw();
 // --@ts-expect-error
 let equation = new Equation(state);
 equation.segment_gap = 50;
-
 let line = new LineSeg(state);
 let line_bot = line.get_items().lineBot();
 line.add_item(line_bot);
@@ -35,6 +35,11 @@ line.add_item(line_bot_end);
 
 // equation.add_segment(pwr); ????? Gooodddddd
 //==============================
+//..........................
+let frac = new Frac(state,line,line);
+//..........................
+
 equation.add_segment(line);
+equation.add_segment(frac);
 console.log("eengn",equation);
 equation.draw();
