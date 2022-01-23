@@ -1,10 +1,11 @@
 import Grid from "./grid.js";
-// let g = new Grid(canvas);
-// g.draw();
-import get_equation from "./equation/get_equation.js";
+let canvas = document.getElementById("crown");
+//@ts-expect-error
+let g = new Grid(canvas);
+
 //==================Grid Ends ================
+import get_equation from "./equation/get_equation.js";
 let equation = get_equation();
-// --@ts-expect-error
 let frac = equation.add_seg().frac();
 
 frac.top.add_item().lineBot();
@@ -25,4 +26,5 @@ frac.bot.add_item().power("w","x");
 //..........................
 
 console.log("eengn",equation);
+g.draw();
 equation.draw();
