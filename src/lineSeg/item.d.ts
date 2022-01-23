@@ -1,5 +1,5 @@
-import Iitem from "../lineSeg/Iitem.js";
-import State from "./state.js";
+import Iitem from "./Iitem.js";
+import State from "../design/state.js";
 export default class Item implements Iitem {
     content: string;
     state: State;

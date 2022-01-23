@@ -7,7 +7,8 @@ export default class LineSeg {
         this.item_gap = 2;
         this.seg_height = 0;
         this.seg_width = 0;
-        this.itemsFactory = new ItemsFactory(this.state);
+        this.itemsFactory =
+            new ItemsFactory(this.state, this.insert_new_item.bind(this));
     }
     get_items() {
         return this.itemsFactory;
@@ -28,7 +29,7 @@ export default class LineSeg {
         }
         return true;
     }
-    add_item(item) {
+    insert_new_item(item) {
         this.seg_width += item.width();
         if (item.height() > this.seg_height) {
             this.seg_height = item.height();

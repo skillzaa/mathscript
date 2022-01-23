@@ -1,5 +1,5 @@
 import ISegment from "../design/Isegment.js";
-import Iitem from "../design/Iitem.js";
+import Iitem from "./Iitem.js";
 import State from "../design/state.js";
 import ItemsFactory from "./itemsFactory.js";
 
@@ -17,7 +17,8 @@ this.items = [];
 this.item_gap = 2;
 this.seg_height = 0;
 this.seg_width = 0;
-this.itemsFactory = new ItemsFactory(this.state);
+this.itemsFactory = 
+new ItemsFactory(this.state,this.insert_new_item.bind(this));
 }
 get_items(){
 return this.itemsFactory;
@@ -40,7 +41,7 @@ draw(): boolean {
 }
 return true;
 }
-add_item(item:Iitem){
+private insert_new_item(item:Iitem){
 this.seg_width += item.width();   
     if (item.height() > this.seg_height){
             this.seg_height = item.height();

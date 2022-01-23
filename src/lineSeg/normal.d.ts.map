@@ -1,0 +1,1 @@
+{"version":3,"file":"normal.d.ts","sourceRoot":"","sources":["../../typescript/lineSeg/normal.ts"],"names":[],"mappings":"AAAA,OAAO,IAAI,MAAM,WAAW,CAAA;AAC5B,OAAO,KAAK,MAAM,oBAAoB,CAAC;AAEvC,MAAM,CAAC,OAAO,OAAO,MAAO,SAAQ,IAAI;IACxC,OAAO,EAAC,MAAM,CAAC;gBACF,KAAK,EAAC,KAAK,EAAC,OAAO,SAAG;IAInC,KAAK,IAAG,MAAM;IAGd,MAAM,IAAG,MAAM;IAIf,IAAI,IAAG,OAAO;CAKb"}

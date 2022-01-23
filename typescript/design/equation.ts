@@ -26,7 +26,6 @@ draw():boolean{
             this.segments[i].width(),
             this.segments[i].height()
         );
-
         //----draw operation
         let tf = this.segments[i].draw();
         //--there may be control segments which may not move the x in that case dont add gap

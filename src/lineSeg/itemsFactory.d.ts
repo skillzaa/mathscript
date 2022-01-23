@@ -1,14 +1,16 @@
 import State from "../design/state.js";
-import Item from "../design/item.js";
-import Power from "../items/power.js";
-import Normal from "../items/normal.js";
-import LineTop from "../items/lineTop.js";
-import LineTopEnd from "../items/lineTopEnd.js";
-import LineBot from "../items/lineBot.js";
-import LineBotEnd from "../items/lineBotEnd.js";
+import Item from "./item.js";
+import Power from "./power.js";
+import Normal from "./normal.js";
+import LineTop from "./lineTop.js";
+import LineTopEnd from "./lineTopEnd.js";
+import LineBot from "./lineBot.js";
+import LineBotEnd from "./lineBotEnd.js";
+import Iitem from "./Iitem.js";
 export default class ItemsFactory {
     private state;
-    constructor(state: State);
+    private add_new_item_fn;
+    constructor(state: State, add_new_item_fn: (item: Iitem) => Iitem);
     item(content?: string): Item;
     power(content?: string, power?: string): Power;
     normal(content?: string): Normal;

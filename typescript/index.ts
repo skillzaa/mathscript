@@ -17,21 +17,22 @@ g.draw();
 // --@ts-expect-error
 let equation = new Equation(state);
 equation.segment_gap = 50;
+
 let line = new LineSeg(state);
 let line_bot = line.get_items().lineBot();
-line.add_item(line_bot);
+// line.add_item(line_bot);
 
 let item = line.get_items().normal("blaz blaz 2");
 // let item = new Normal(state, "blabla");
-line.add_item(item);
+// line.add_item(item);
 let pwr = line.get_items().power("X","2");
 // let pwr = new Power(state,"X","2");
-line.add_item(pwr);
+// line.add_item(pwr);
 
 
 let line_bot_end = line.get_items().lineBotEnd();
 // let line_bot_end = new LineBotEnd(state);
-line.add_item(line_bot_end);
+// line.add_item(line_bot_end);
 
 // equation.add_segment(pwr); ????? Gooodddddd
 //==============================
@@ -39,11 +40,11 @@ line.add_item(line_bot_end);
 let line02 = new LineSeg(state);
 
 let line02_item = line02.get_items().normal("a + b = c");
-line02.add_item(line02_item);
+// line02.add_item(line02_item);
 
 let line03 = new LineSeg(state);
 let line03_item = line02.get_items().normal("x + y = z");
-line02.add_item(line03_item);
+// line02.add_item(line03_item);
 
 
 

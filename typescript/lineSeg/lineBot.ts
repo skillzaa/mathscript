@@ -1,4 +1,4 @@
-import Item from "../design/item.js";
+import Item from "./item.js";
 import State from "../design/state.js";
 
 
