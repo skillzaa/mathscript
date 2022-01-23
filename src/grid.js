@@ -6,7 +6,7 @@ export default class Grid {
         this.cell_width = 50;
         this.cell_height = 50;
         this.show_numbers = true;
-        this.numbers_fillStyle = "#ff0000";
+        this.numbers_fillStyle = "#b1b4c9";
         this.lineColor = "#d9dcf7";
     }
     draw() {
@@ -52,7 +52,7 @@ export default class Grid {
     }
     draw_number(number, x, y) {
         this.ctx.fillStyle = this.numbers_fillStyle;
-        this.ctx.font = '20px serif';
+        this.ctx.font = '10px serif';
         this.ctx.textBaseline = "top";
         this.ctx.fillText(number.toString(), x, y);
     }

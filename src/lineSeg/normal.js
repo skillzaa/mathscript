@@ -11,7 +11,7 @@ export default class Normal extends Item {
         return this.state.chars_width("Xi");
     }
     draw() {
-        this.state.drawTextDelta(this.content);
+        this.state.drawText(this.content, this.state.getX(), this.state.getY());
         return true;
     }
 }

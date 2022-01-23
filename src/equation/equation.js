@@ -1,9 +1,10 @@
+import State from "../design/state.js";
 import SegFactory from "../design/segFactory.js";
-// import Report from "./report.js";
 export default class Equation {
-    constructor(state) {
+    constructor(ctx, x = 0, y = 0) {
         this.segments = [];
-        this.state = state;
+        this.state = new State(ctx, x, y);
+        // this.state.getX+
         this.segments = [];
         this.segment_gap = 2;
         this.lat_width = 0;
@@ -34,7 +35,7 @@ export default class Equation {
         return this.lat_height;
     }
     //--function arguments shd be concrete data types and not classes / objects unless required absoliutely.
-    //--so a lat machine can always get segments from outside as long as they complyby ISegment interface
+    //--so a lat machine can always get segments from outside as long as they complyby IDrawable interface
     add_new_segment(segment) {
         this.lat_width += segment.width();
         if (segment.height() > this.lat_height) {

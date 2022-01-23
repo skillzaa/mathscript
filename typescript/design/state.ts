@@ -7,20 +7,22 @@ private ctx:CanvasRenderingContext2D;
 
 private fontSize:number;
 private fontName:string;
-private canvas: HTMLCanvasElement;
+// private canvas: HTMLCanvasElement;
 public current_seg:SegStateData;
+public fillStyle:string;
+public strokeStyle:string;
 
-constructor (canvas:HTMLCanvasElement,ctx:CanvasRenderingContext2D){
-this.canvas = canvas;
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+constructor (ctx:CanvasRenderingContext2D,x:number,y:number){
 this.ctx = ctx;
+this.x = x;
+this.y = y;
+this.fillStyle = "#1e1eea";
+this.strokeStyle = "#1e1eea";
 this.current_seg = new SegStateData();
-this.x = 100;
-this.y = 100;
 this.fontSize = 50;
 this.fontName = "serif";
 //--need to be changed
+this.init_ctx();
 this.resetFont();
 }
 //===================Public
@@ -38,7 +40,9 @@ public draw_line_top(){
     this.ctx.stroke();
 }
 public draw_line_bot(){
-    this.ctx.strokeStyle = "red";
+    this.ctx.strokeStyle = this.strokeStyle;
+    this.ctx.fillStyle = this.fillStyle;
+
     this.ctx.beginPath();
     this.ctx.moveTo(this.current_seg.line_bot_startX,this.current_seg.line_bot_startY);
     this.ctx.lineTo(this.x ,this.current_seg.line_bot_startY);
@@ -46,7 +50,9 @@ public draw_line_bot(){
 }
 public draw_line(startX:number,startY:number,endX:number,endY:number){
     //------------------------
-    this.ctx.strokeStyle = "red";
+    this.ctx.strokeStyle = this.strokeStyle;
+    this.ctx.fillStyle = this.fillStyle;
+
     this.ctx.beginPath();
     this.ctx.moveTo(startX,startY);
     this.ctx.lineTo(endX,endY);
@@ -96,7 +102,9 @@ return Math.ceil(m);
 }
 public drawText(content ="",x=0,y=0,fontSize= this.fontSize){
     this.ctx.save()
-    //dont miss gap "px_"
+    this.ctx.strokeStyle = this.strokeStyle;
+    this.ctx.fillStyle = this.fillStyle;
+
     let f = fontSize + "px " + this.fontName;
     this.ctx.font = f;
     this.ctx.fillText(content, x, y);
@@ -104,7 +112,9 @@ public drawText(content ="",x=0,y=0,fontSize= this.fontSize){
 }
 public drawTextDelta(content ="",fontSize= this.fontSize,deltaX=0,deltaY=0){
     this.ctx.save()
-    //dont miss gap "px_"
+    this.ctx.strokeStyle = this.strokeStyle;
+    this.ctx.fillStyle = this.fillStyle;
+    
     let f = fontSize + "px " + this.fontName;
     this.ctx.font = f;
     this.ctx.fillText(content, this.x + deltaX, this.y + deltaY);
@@ -128,12 +138,15 @@ private saveCtx(){
 private resetFont(){
     this.ctx.font = this.fontSize + "px " + this.fontName;
 }
-
-canvas_width():number{
-    return this.canvas.width;
+private init_ctx(){
+    this.ctx.fillStyle = this.fillStyle;
+    this.ctx.strokeStyle = this.strokeStyle;
 }
-canvas_height():number{
-    return this.canvas.height;
-}
+// canvas_width():number{
+//     return this.canvas.width;
+// }
+// canvas_height():number{
+//     return this.canvas.height;
+// }
 
 }

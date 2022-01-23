@@ -15,7 +15,7 @@ return this.state.chars_width("Xi");
 }
 
 draw():boolean{
-this.state.drawTextDelta(this.content);    
+this.state.drawText(this.content,this.state.getX(),this.state.getY());    
 return true;
 }
 

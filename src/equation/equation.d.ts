@@ -2,12 +2,12 @@ import State from "../design/state.js";
 import SegFactory from "../design/segFactory.js";
 export default class Equation {
     segment_gap: number;
-    private state;
+    state: State;
     private segments;
     private lat_width;
     private lat_height;
     private segFactory;
-    constructor(state: State);
+    constructor(ctx: CanvasRenderingContext2D, x?: number, y?: number);
     add_seg(): SegFactory;
     draw(): boolean;
     width(): number;

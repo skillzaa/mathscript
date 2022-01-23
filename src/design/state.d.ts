@@ -5,9 +5,10 @@ export default class State {
     private ctx;
     private fontSize;
     private fontName;
-    private canvas;
     current_seg: SegStateData;
-    constructor(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D);
+    fillStyle: string;
+    strokeStyle: string;
+    constructor(ctx: CanvasRenderingContext2D, x: number, y: number);
     getX(): number;
     getY(): number;
     draw_line_top(): void;
@@ -30,7 +31,6 @@ export default class State {
     private restoreCtx;
     private saveCtx;
     private resetFont;
-    canvas_width(): number;
-    canvas_height(): number;
+    private init_ctx;
 }
 //# sourceMappingURL=state.d.ts.map

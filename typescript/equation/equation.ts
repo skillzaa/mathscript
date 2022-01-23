@@ -1,13 +1,11 @@
 import IDrawable from "../design/IDrawable.js";
 import State from "../design/state.js";
-import SegStateData from "../design/seg_state_data.js";
 import SegFactory from "../design/segFactory.js";
-// import Report from "./report.js";
 
 export default class Equation {
 public segment_gap:number;
 
-private state:State;
+public state:State;
 private segments:IDrawable[] =[];
 
 //--these r for internal use since its width andheight depends upon segment width n ht
@@ -15,8 +13,9 @@ private lat_width:number;
 private lat_height:number;
 private segFactory:SegFactory;
 
-constructor (state:State){
-this.state = state;
+constructor (ctx:CanvasRenderingContext2D,x=0,y=0){
+this.state = new State(ctx,x,y);
+// this.state.getX+
 this.segments = [];  
 this.segment_gap = 2;
 this.lat_width = 0 ;
@@ -55,7 +54,7 @@ height():number {
 //--function arguments shd be concrete data types and not classes / objects unless required absoliutely.
 
 
-//--so a lat machine can always get segments from outside as long as they complyby ISegment interface
+//--so a lat machine can always get segments from outside as long as they complyby IDrawable interface
 private add_new_segment(segment:IDrawable){
 this.lat_width += segment.width();   
 if (segment.height() > this.lat_height){

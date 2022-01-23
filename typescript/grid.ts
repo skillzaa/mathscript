@@ -16,7 +16,7 @@ this.ctx = canvas.getContext('2d');
 this.cell_width = 50;    
 this.cell_height = 50;
 this.show_numbers = true;   
-this.numbers_fillStyle = "#ff0000";
+this.numbers_fillStyle = "#b1b4c9";
 this.lineColor = "#d9dcf7";
 }
 
@@ -63,7 +63,7 @@ this.ctx.stroke();
 }
 draw_number(number:number,x:number,y:number){
 this.ctx.fillStyle = this.numbers_fillStyle;
-this.ctx.font = '20px serif';
+this.ctx.font = '10px serif';
 this.ctx.textBaseline = "top";
 this.ctx.fillText(number.toString(),x,y);
 }
