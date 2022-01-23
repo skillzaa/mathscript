@@ -1,10 +1,11 @@
 import ISegment from "./Isegment.js";
 import State from "./state.js";
 import SegStateData from "./seg_state_data.js";
-
+import ItemsFactory from "./itemsFactory.js";
 export default class Equation {
 public segment_gap:number;
 
+private itemsFactory:ItemsFactory;
 private state:State;
 private segments:ISegment[] =[];
 
@@ -14,11 +15,11 @@ private lat_height:number;
 
 constructor (state:State){
 this.state = state;
-// this.local_state = {};
 this.segments = [];  
 this.segment_gap = 2;
 this.lat_width = 0 ;
 this.lat_height = 0 ;
+this.itemsFactory = new ItemsFactory(this.state);
 } 
 
 draw():boolean{
@@ -45,6 +46,10 @@ width():number {
 }
 height():number {
     return this.lat_height;
+}
+
+get_items(){
+return this.itemsFactory;
 }
 //--function arguments shd be concrete data types and not classes / objects unless required absoliutely.
 
