@@ -1,4 +1,5 @@
 import SegFactory from "../design/segFactory.js";
+// import Report from "./report.js";
 export default class Equation {
     constructor(state) {
         this.segments = [];

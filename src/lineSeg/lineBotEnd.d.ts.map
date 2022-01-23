@@ -1,1 +1,1 @@
-{"version":3,"file":"lineBotEnd.d.ts","sourceRoot":"","sources":["../../typescript/lineSeg/lineBotEnd.ts"],"names":[],"mappings":"AAAA,OAAO,IAAI,MAAM,WAAW,CAAC;AAC7B,OAAO,KAAK,MAAM,oBAAoB,CAAC;AAGvC,MAAM,CAAC,OAAO,OAAO,UAAW,SAAQ,IAAI;gBAChC,KAAK,EAAC,KAAK;IAGvB,IAAI,IAAG,OAAO;CAOb"}
+{"version":3,"file":"lineBotEnd.d.ts","sourceRoot":"","sources":["../../typescript/lineSeg/lineBotEnd.ts"],"names":[],"mappings":"AAAA,OAAO,IAAI,MAAM,WAAW,CAAC;AAC7B,OAAO,KAAK,MAAM,oBAAoB,CAAC;AAGvC,MAAM,CAAC,OAAO,OAAO,UAAW,SAAQ,IAAI;gBAChC,KAAK,EAAC,KAAK;IAGvB,IAAI,IAAG,OAAO;CAQb"}

@@ -2,6 +2,7 @@ import IDrawable from "../design/IDrawable.js";
 import State from "../design/state.js";
 import SegStateData from "../design/seg_state_data.js";
 import SegFactory from "../design/segFactory.js";
+// import Report from "./report.js";
 
 export default class Equation {
 public segment_gap:number;
@@ -63,4 +64,5 @@ if (segment.height() > this.lat_height){
 this.segments.push(segment);
 return segment;
 }
+
 }//ends
