@@ -5,6 +5,7 @@ export default class Frac implements ISegment {
     private state;
     top: LineSeg;
     bot: LineSeg;
+    divider_gap: number;
     constructor(state: State);
     draw(): boolean;
     width(): number;
