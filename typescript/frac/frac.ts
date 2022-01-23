@@ -4,12 +4,12 @@ import ISegment from "../design/Isegment.js";
 
 export default class Frac implements ISegment {
 private state:State;
-private top:LineSeg;
-private bot:LineSeg;
-constructor(state:State,top:LineSeg,bot:LineSeg){
+public top:LineSeg;
+public bot:LineSeg;
+constructor(state:State){
 this.state = state;    
-this.top = top;
-this.bot = bot;
+this.top = new LineSeg(this.state);
+this.bot = new LineSeg(this.state);
 }
 
 draw(): boolean {

@@ -20,7 +20,7 @@ this.seg_width = 0;
 this.itemsFactory = 
 new ItemsFactory(this.state,this.insert_new_item.bind(this));
 }
-get_items(){
+add_item(){
 return this.itemsFactory;
 }
     

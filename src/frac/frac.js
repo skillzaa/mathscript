@@ -1,8 +1,9 @@
+import LineSeg from "../lineSeg/lineSeg.js";
 export default class Frac {
-    constructor(state, top, bot) {
+    constructor(state) {
         this.state = state;
-        this.top = top;
-        this.bot = bot;
+        this.top = new LineSeg(this.state);
+        this.bot = new LineSeg(this.state);
     }
     draw() {
         this.top.draw();

@@ -1,1 +1,0 @@
-{"version":3,"file":"eqengine-old.d.ts","sourceRoot":"","sources":["../../typescript/eqEngine/eqengine-old.ts"],"names":[],"mappings":"AACA,OAAO,QAAQ,MAAM,eAAe,CAAC;AAErC,MAAM,CAAC,OAAO,OAAO,SAAS;IAC9B,OAAO,CAAC,QAAQ,CAAgB;IAChC,OAAO,CAAC,KAAK,CAAO;gBAEP,MAAM,EAAC,GAAG;IAKvB,IAAI;IASJ,WAAW,CAAC,OAAO,EAAC,QAAQ;CAM3B"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"itemsFactory.d.ts","sourceRoot":"","sources":["../typescript/itemsFactory.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,mBAAmB,CAAC;AACtC,OAAO,IAAI,MAAM,kBAAkB,CAAC;AACpC,OAAO,KAAK,MAAM,kBAAkB,CAAC;AASrC,MAAM,CAAC,OAAO,OAAO,YAAY;IACjC,OAAO,CAAC,KAAK,CAAM;gBACP,KAAK,EAAC,KAAK;IAIvB,IAAI;IAIJ,KAAK;CAOJ"}

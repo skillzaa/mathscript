@@ -1,6 +1,8 @@
 import ISegment from "./Isegment.js";
 import State from "./state.js";
 import SegStateData from "./seg_state_data.js";
+import SegFactory from "./segFactory.js";
+
 export default class Equation {
 public segment_gap:number;
 
@@ -10,6 +12,7 @@ private segments:ISegment[] =[];
 //--these r for internal use since its width andheight depends upon segment width n ht
 private lat_width:number;
 private lat_height:number;
+private segFactory:SegFactory;
 
 constructor (state:State){
 this.state = state;
@@ -17,8 +20,12 @@ this.segments = [];
 this.segment_gap = 2;
 this.lat_width = 0 ;
 this.lat_height = 0 ;
+this.segFactory = new SegFactory(this.state , this.add_new_segment.bind(this));
 } 
 
+add_seg(){
+    return this.segFactory;
+}
 draw():boolean{
     for (let i = 0; i < this.segments.length; i++) {
         //----load next seg to state
@@ -48,7 +55,7 @@ height():number {
 
 
 //--so a lat machine can always get segments from outside as long as they complyby ISegment interface
-add_segment(segment:ISegment){
+private add_new_segment(segment:ISegment){
 this.lat_width += segment.width();   
 if (segment.height() > this.lat_height){
         this.lat_height = segment.height();

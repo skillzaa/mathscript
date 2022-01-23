@@ -1,1 +1,0 @@
-{"version":3,"file":"divider.d.ts","sourceRoot":"","sources":["../../typescript/segLineItems/divider.ts"],"names":[],"mappings":"AAAA,OAAO,QAAQ,MAAM,2BAA2B,CAAC;AACjD,OAAO,KAAK,MAAM,aAAa,CAAC;AAChC,OAAO,UAAU,MAAM,0BAA0B,CAAC;AAElD,MAAM,CAAC,OAAO,OAAO,OAAQ,YAAW,QAAQ;;IAGhD,IAAI,CAAC,KAAK,EAAC,KAAK,EAAC,OAAO,EAAC,MAAM,EAAC,WAAW,EAAC,UAAU,GAAE,MAAM;CAM7D"}

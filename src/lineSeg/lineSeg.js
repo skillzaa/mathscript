@@ -10,7 +10,7 @@ export default class LineSeg {
         this.itemsFactory =
             new ItemsFactory(this.state, this.insert_new_item.bind(this));
     }
-    get_items() {
+    add_item() {
         return this.itemsFactory;
     }
     width() {

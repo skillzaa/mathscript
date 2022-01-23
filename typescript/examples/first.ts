@@ -1,6 +1,6 @@
-import Grid from "./grid.js";
-import State from "./design/state.js";
-import Equation from "./design/equation.js";
+import Grid from "../grid.js";
+import State from "../design/state.js";
+import Equation from "../design/equation.js";
 //===========================================
 let canvas = document.getElementById("crown");
 // @ts-expect-error
@@ -15,15 +15,15 @@ g.draw();
 // --@ts-expect-error
 let equation = new Equation(state);
 equation.segment_gap = 50;
-let frac = equation.add_seg().frac();
+let line = equation.add_seg().lineSeg();
 
-frac.top.add_item().lineBot();
-frac.top.add_item().normal("blaz blaz 2");
-frac.top.add_item().power("X","2");
-frac.top.add_item().lineBotEnd();
-//..........................
-frac.bot.add_item().power("w","x");
+line.add_item().lineBot();
+line.add_item().normal("blaz blaz 2");
+line.add_item().power("X","2");
+line.add_item().lineBotEnd();
+
 //==============================
+//..........................
 // let line02 = equation.add_seg().lineSeg();
 
 // let line02_item = line02.add_item().normal("a + b = c");

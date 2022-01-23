@@ -1,3 +1,4 @@
+import SegFactory from "./segFactory.js";
 export default class Equation {
     constructor(state) {
         this.segments = [];
@@ -6,6 +7,10 @@ export default class Equation {
         this.segment_gap = 2;
         this.lat_width = 0;
         this.lat_height = 0;
+        this.segFactory = new SegFactory(this.state, this.add_new_segment.bind(this));
+    }
+    add_seg() {
+        return this.segFactory;
     }
     draw() {
         for (let i = 0; i < this.segments.length; i++) {
@@ -29,7 +34,7 @@ export default class Equation {
     }
     //--function arguments shd be concrete data types and not classes / objects unless required absoliutely.
     //--so a lat machine can always get segments from outside as long as they complyby ISegment interface
-    add_segment(segment) {
+    add_new_segment(segment) {
         this.lat_width += segment.width();
         if (segment.height() > this.lat_height) {
             this.lat_height = segment.height();

@@ -1,8 +1,6 @@
 import Grid from "./grid.js";
 import State from "./design/state.js";
 import Equation from "./design/equation.js";
-import LineSeg from "./lineSeg/lineSeg.js";
-import Frac from "./frac/frac.js";
 //===========================================
 let canvas = document.getElementById("crown");
 // @ts-expect-error
@@ -16,30 +14,20 @@ g.draw();
 // --@ts-expect-error
 let equation = new Equation(state);
 equation.segment_gap = 50;
-let line = new LineSeg(state);
-let line_bot = line.get_items().lineBot();
-// line.add_item(line_bot);
-let item = line.get_items().normal("blaz blaz 2");
-// let item = new Normal(state, "blabla");
-// line.add_item(item);
-let pwr = line.get_items().power("X", "2");
-// let pwr = new Power(state,"X","2");
-// line.add_item(pwr);
-let line_bot_end = line.get_items().lineBotEnd();
-// let line_bot_end = new LineBotEnd(state);
-// line.add_item(line_bot_end);
-// equation.add_segment(pwr); ????? Gooodddddd
+let frac = equation.add_seg().frac();
+frac.top.add_item().lineBot();
+frac.top.add_item().normal("blaz blaz 2");
+frac.top.add_item().power("X", "2");
+frac.top.add_item().lineBotEnd();
+//..........................
+frac.bot.add_item().power("w", "x");
 //==============================
+// let line02 = equation.add_seg().lineSeg();
+// let line02_item = line02.add_item().normal("a + b = c");
+// let line03 = equation.add_seg().lineSeg();
+// let line03_item = line02.add_item().normal("x + y = z");
+// let frac = new Frac(state,line02,line03);
+// let frac = equation
 //..........................
-let line02 = new LineSeg(state);
-let line02_item = line02.get_items().normal("a + b = c");
-// line02.add_item(line02_item);
-let line03 = new LineSeg(state);
-let line03_item = line02.get_items().normal("x + y = z");
-// line02.add_item(line03_item);
-let frac = new Frac(state, line02, line03);
-//..........................
-equation.add_segment(line);
-equation.add_segment(frac);
 console.log("eengn", equation);
 equation.draw();

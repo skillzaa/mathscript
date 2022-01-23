@@ -13,18 +13,18 @@ import Iitem from "./Iitem.js";
 
 export default class ItemsFactory {
 private state:State;
-private add_new_item_fn:(item:Iitem) => Iitem; // = [] is must not | []
+private add_new_item_fn:(item:Iitem) => Iitem;
 
 constructor(state:State , add_new_item_fn:(item:Iitem)=> Iitem){
 this.state = state;
 this.add_new_item_fn = add_new_item_fn;
 }
 
-item(content=""){
-let i = new Item(this.state,content);
-this.add_new_item_fn(i);
-return i;
-}
+// item(content=""){
+// let i = new Item(this.state,content);
+// this.add_new_item_fn(i);
+// return i;
+// }
 power(content="x",power="2"){
 let i = new Power(this.state,content,power);
 this.add_new_item_fn(i);

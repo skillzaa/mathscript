@@ -1,1 +1,0 @@
-{"version":3,"file":"normal.d.ts","sourceRoot":"","sources":["../typescript/normal.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,YAAY,CAAC;AAE/B,MAAM,CAAC,OAAO,OAAO,MAAM;IACvB,OAAO,EAAC,MAAM,CAAC;IACf,KAAK,EAAC,KAAK,CAAC;gBACH,KAAK,KAAA,EAAC,OAAO,SAAM;IAIhC,KAAK;IAOL,IAAI;CAIH"}

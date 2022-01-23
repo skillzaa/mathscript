@@ -9,7 +9,7 @@ export default class LineSeg implements ISegment {
     private itemsFactory;
     private state;
     constructor(state: State);
-    get_items(): ItemsFactory;
+    add_item(): ItemsFactory;
     width(): number;
     height(): number;
     draw(): boolean;

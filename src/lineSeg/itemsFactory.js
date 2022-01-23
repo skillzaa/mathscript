@@ -1,4 +1,3 @@
-import Item from "./item.js";
 import Power from "./power.js";
 import Normal from "./normal.js";
 import LineTop from "./lineTop.js";
@@ -11,11 +10,11 @@ export default class ItemsFactory {
         this.state = state;
         this.add_new_item_fn = add_new_item_fn;
     }
-    item(content = "") {
-        let i = new Item(this.state, content);
-        this.add_new_item_fn(i);
-        return i;
-    }
+    // item(content=""){
+    // let i = new Item(this.state,content);
+    // this.add_new_item_fn(i);
+    // return i;
+    // }
     power(content = "x", power = "2") {
         let i = new Power(this.state, content, power);
         this.add_new_item_fn(i);

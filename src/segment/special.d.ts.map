@@ -1,1 +1,0 @@
-{"version":3,"file":"special.d.ts","sourceRoot":"","sources":["../../typescript/segment/special.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,aAAa,CAAC;AAEhC,MAAM,CAAC,OAAO,OAAO,OAAO;IACxB,OAAO,EAAC,MAAM,CAAC;IACf,KAAK,EAAC,KAAK,CAAC;gBACH,KAAK,EAAC,KAAK,EAAC,OAAO,SAAQ;IAIxC,KAAK;IAOL,IAAI;CAgBH"}
