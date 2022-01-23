@@ -5,11 +5,11 @@ import LineTop from "./lineTop.js";
 import LineTopEnd from "./lineTopEnd.js";
 import LineBot from "./lineBot.js";
 import LineBotEnd from "./lineBotEnd.js";
-import Iitem from "./Iitem.js";
+import IDrawable from "../design/IDrawable.js";
 export default class ItemsFactory {
     private state;
     private add_new_item_fn;
-    constructor(state: State, add_new_item_fn: (item: Iitem) => Iitem);
+    constructor(state: State, add_new_item_fn: (item: IDrawable) => IDrawable);
     power(content?: string, power?: string): Power;
     normal(content?: string): Normal;
     linetop(): LineTop;

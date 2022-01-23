@@ -1,7 +1,7 @@
-import ISegment from "../design/Isegment.js";
+import IDrawable from "../design/IDrawable.js";
 import State from "../design/state.js";
 import ItemsFactory from "./itemsFactory.js";
-export default class LineSeg implements ISegment {
+export default class LineSeg implements IDrawable {
     private items;
     private item_gap;
     private seg_width;

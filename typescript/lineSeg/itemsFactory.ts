@@ -7,15 +7,15 @@ import LineTop from "./lineTop.js";
 import LineTopEnd from "./lineTopEnd.js";
 import LineBot from "./lineBot.js";
 import LineBotEnd from "./lineBotEnd.js";
-import Iitem from "./Iitem.js";
+import IDrawable from "../design/IDrawable.js";
 
 //--Just provide the item with default settings
 
 export default class ItemsFactory {
 private state:State;
-private add_new_item_fn:(item:Iitem) => Iitem;
+private add_new_item_fn:(item:IDrawable) => IDrawable;
 
-constructor(state:State , add_new_item_fn:(item:Iitem)=> Iitem){
+constructor(state:State , add_new_item_fn:(item:IDrawable)=> IDrawable){
 this.state = state;
 this.add_new_item_fn = add_new_item_fn;
 }

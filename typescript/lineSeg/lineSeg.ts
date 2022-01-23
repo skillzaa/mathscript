@@ -1,10 +1,9 @@
-import ISegment from "../design/Isegment.js";
-import Iitem from "./Iitem.js";
+import IDrawable from "../design/IDrawable.js";
 import State from "../design/state.js";
 import ItemsFactory from "./itemsFactory.js";
 
-export default class LineSeg implements ISegment {
-private items:Iitem[] = []; // = [] is must not | []
+export default class LineSeg implements IDrawable {
+private items:IDrawable[] = []; // = [] is must not | []
 private item_gap:number;
 private seg_width:number;
 private seg_height:number;
@@ -41,7 +40,7 @@ draw(): boolean {
 }
 return true;
 }
-private insert_new_item(item:Iitem){
+private insert_new_item(item:IDrawable){
 this.seg_width += item.width();   
     if (item.height() > this.seg_height){
             this.seg_height = item.height();

@@ -1,13 +1,13 @@
 import State from "./state.js";
 import LineSeg from "../lineSeg/lineSeg.js";
 import Frac from "../frac/frac.js";
-import ISegment from "./Isegment.js";
+import IDrawable from "../design/IDrawable.js";
 
 export default class SegFactory {
 private state:State;
-private add_new_seg_fn:(segment:ISegment) => ISegment; 
+private add_new_seg_fn:(segment:IDrawable) => IDrawable; 
 
-constructor(state:State,add_new_seg_fn:(segment:ISegment) => ISegment){
+constructor(state:State,add_new_seg_fn:(segment:IDrawable) => IDrawable){
 this.state = state;   
 this.add_new_seg_fn = add_new_seg_fn; 
 }

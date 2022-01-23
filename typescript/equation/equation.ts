@@ -1,4 +1,4 @@
-import ISegment from "../design/Isegment.js";
+import IDrawable from "../design/IDrawable.js";
 import State from "../design/state.js";
 import SegStateData from "../design/seg_state_data.js";
 import SegFactory from "../design/segFactory.js";
@@ -7,7 +7,7 @@ export default class Equation {
 public segment_gap:number;
 
 private state:State;
-private segments:ISegment[] =[];
+private segments:IDrawable[] =[];
 
 //--these r for internal use since its width andheight depends upon segment width n ht
 private lat_width:number;
@@ -55,7 +55,7 @@ height():number {
 
 
 //--so a lat machine can always get segments from outside as long as they complyby ISegment interface
-private add_new_segment(segment:ISegment){
+private add_new_segment(segment:IDrawable){
 this.lat_width += segment.width();   
 if (segment.height() > this.lat_height){
         this.lat_height = segment.height();

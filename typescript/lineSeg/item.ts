@@ -1,7 +1,7 @@
-import Iitem from "./Iitem.js";
+import IDrawable from "../design/IDrawable.js";
 import State from "../design/state.js";
 
-export default class Item implements Iitem {
+export default class Item implements IDrawable {
 content:string;
 state:State;
 

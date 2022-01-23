@@ -1,7 +1,7 @@
 import State from "../design/state.js";
 import LineSeg from "../lineSeg/lineSeg.js";
-import ISegment from "../design/Isegment.js";
-export default class Frac implements ISegment {
+import IDrawable from "../design/IDrawable.js";
+export default class Frac implements IDrawable {
     private state;
     top: LineSeg;
     bot: LineSeg;
