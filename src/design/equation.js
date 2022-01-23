@@ -1,4 +1,3 @@
-import ItemsFactory from "./itemsFactory.js";
 export default class Equation {
     constructor(state) {
         this.segments = [];
@@ -7,7 +6,6 @@ export default class Equation {
         this.segment_gap = 2;
         this.lat_width = 0;
         this.lat_height = 0;
-        this.itemsFactory = new ItemsFactory(this.state);
     }
     draw() {
         for (let i = 0; i < this.segments.length; i++) {
@@ -28,9 +26,6 @@ export default class Equation {
     }
     height() {
         return this.lat_height;
-    }
-    get_items() {
-        return this.itemsFactory;
     }
     //--function arguments shd be concrete data types and not classes / objects unless required absoliutely.
     //--so a lat machine can always get segments from outside as long as they complyby ISegment interface

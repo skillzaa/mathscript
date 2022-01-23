@@ -12,4 +12,4 @@ export default class Segment implements ISegment {
     draw(state: state): boolean;
     add_item(item: Iitem): Iitem;
 }
-//# sourceMappingURL=lineSegment.d.ts.map
+//# sourceMappingURL=segment.d.ts.map

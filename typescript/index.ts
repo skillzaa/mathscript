@@ -1,7 +1,7 @@
 import Grid from "./grid.js";
 import State from "./design/state.js";
 import Equation from "./design/equation.js";
-import Segment from "./design/segment.js";
+import LineSeg from "./lineSeg/lineSeg.js";
 //===========================================
 let canvas = document.getElementById("crown");
 // @ts-expect-error
@@ -17,22 +17,19 @@ g.draw();
 let equation = new Equation(state);
 equation.segment_gap = 50;
 
-let line = new Segment();
-
-let line_bot = equation.get_items().lineBot();
-
-// let line_bot = new LineBot(state);
+let line = new LineSeg(state);
+let line_bot = line.get_items().lineBot();
 line.add_item(line_bot);
 
-let item = equation.get_items().normal("blaz blaz 2");
+let item = line.get_items().normal("blaz blaz 2");
 // let item = new Normal(state, "blabla");
 line.add_item(item);
-let pwr = equation.get_items().power("X","2");
+let pwr = line.get_items().power("X","2");
 // let pwr = new Power(state,"X","2");
 line.add_item(pwr);
 
 
-let line_bot_end = equation.get_items().lineBotEnd();
+let line_bot_end = line.get_items().lineBotEnd();
 // let line_bot_end = new LineBotEnd(state);
 line.add_item(line_bot_end);
 

@@ -1,5 +1,5 @@
-import State from "./state.js";
-import Item from "./item.js";
+import State from "../design/state.js";
+import Item from "../design/item.js";
 
 import Power from "../items/power.js";
 import Normal from "../items/normal.js";

@@ -1,10 +1,16 @@
-export default class Segment {
-    constructor() {
+import ItemsFactory from "./itemsFactory.js";
+export default class LineSeg {
+    constructor(state) {
         this.items = []; // = [] is must not | []
+        this.state = state;
         this.items = [];
         this.item_gap = 2;
         this.seg_height = 0;
         this.seg_width = 0;
+        this.itemsFactory = new ItemsFactory(this.state);
+    }
+    get_items() {
+        return this.itemsFactory;
     }
     width() {
         return this.seg_width;
