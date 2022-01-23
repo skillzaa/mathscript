@@ -1,0 +1,32 @@
+{
+  "name": "equationengine",
+  "version": "0.0.1",
+  "description": "A lib to write mathematical equations on HTML5 canvas",
+  "main": "index.js",
+  "dependencies": {
+    "jslint": "^0.12.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.7",
+    "jest": "^27.4.5"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skillzaa/pixi.git"
+  },
+  "keywords": [
+    "pixi"
+  ],
+  "author": "Bilal Tariq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skillzaa/pixi/issues"
+  },
+  "homepage": "https://github.com/skillzaa/pixi#readme",
+  "directories": {
+    "test": "tests"
+  }
+}
