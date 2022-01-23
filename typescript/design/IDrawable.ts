@@ -1,5 +1,5 @@
 
-export default interface ISegment{
+export default interface IDrawable{
     width():number;
     height():number;
     draw():boolean; 
