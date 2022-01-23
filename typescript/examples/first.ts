@@ -1,38 +1,31 @@
 import Grid from "../grid.js";
-import State from "../design/state.js";
-import Equation from "../equation/equation.js";
-//===========================================
 let canvas = document.getElementById("crown");
-// @ts-expect-error
-let ctx = canvas.getContext('2d');
-// @ts-expect-error
-let state= new State(canvas,ctx);
-
-// @ts-expect-error
+//@ts-expect-error
 let g = new Grid(canvas);
-g.draw();
+
 //==================Grid Ends ================
-// --@ts-expect-error
-let equation = new Equation(state);
-equation.segment_gap = 50;
-let line = equation.add_seg().lineSeg();
+import get_equation from "../equation/get_equation.js";
+let equation = get_equation();
+let frac = equation.add_seg().frac();
 
-line.add_item().lineBot();
-line.add_item().normal("blaz blaz 2");
-line.add_item().power("X","2");
-line.add_item().lineBotEnd();
+frac.top.add_item().lineBot();
+// frac.top.add_item()
+frac.top.add_item().normal("blaz blaz 2");
 
+frac.top.add_item().power("X","2");
+frac.top.add_item().lineBotEnd();
+//..........................
+frac.bot.add_item().sqrt();
+frac.bot.add_item().power("w","x");
+frac.bot.add_item().sqrtEnd();
 //==============================
-//..........................
-// let line02 = equation.add_seg().lineSeg();
+let lseg = equation.add_seg().lineSeg();
+lseg.add_item().normal(" + ");
+lseg.add_item().lineBot();
+lseg.add_item().normal("2ab * 354");
+lseg.add_item().lineBotEnd();
 
-// let line02_item = line02.add_item().normal("a + b = c");
-
-// let line03 = equation.add_seg().lineSeg();
-// let line03_item = line02.add_item().normal("x + y = z");
-// let frac = new Frac(state,line02,line03);
-// let frac = equation
-//..........................
 
 console.log("eengn",equation);
+g.draw();
 equation.draw();
