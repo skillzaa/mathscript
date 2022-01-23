@@ -9,6 +9,7 @@ constructor(state:State){
 draw():boolean{
     //=====add to local state
     this.state.draw_line_bot();
+    this.state.set_bot_line_mid();
     return true;
 }
 

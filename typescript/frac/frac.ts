@@ -20,6 +20,8 @@ draw(): boolean {
     this.state.incY(this.top.height());
     this.state.decX(this.top.width());
     this.bot.draw();
+    this.state.decY(this.top.height());
+    this.state.incX(this.top.width());
     return true
 }
 width():number{

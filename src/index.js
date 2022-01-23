@@ -13,6 +13,11 @@ frac.top.add_item().lineBotEnd();
 //..........................
 frac.bot.add_item().power("w", "x");
 //==============================
+let lseg = equation.add_seg().lineSeg();
+lseg.add_item().normal(" + ");
+lseg.add_item().lineBot();
+lseg.add_item().normal("2ab * 354");
+lseg.add_item().lineBotEnd();
 // let line02 = equation.add_seg().lineSeg();
 // let line02_item = line02.add_item().normal("a + b = c");
 // let line03 = equation.add_seg().lineSeg();

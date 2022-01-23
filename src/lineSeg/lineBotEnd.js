@@ -6,6 +6,7 @@ export default class LineBotEnd extends Item {
     draw() {
         //=====add to local state
         this.state.draw_line_bot();
+        this.state.set_bot_line_mid();
         return true;
     }
 }

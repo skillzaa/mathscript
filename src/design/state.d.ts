@@ -12,6 +12,7 @@ export default class State {
     getY(): number;
     draw_line_top(): void;
     draw_line_bot(): void;
+    set_bot_line_mid(): void;
     load_current_seg(width: number, height: number): void;
     addX(n: number): void;
     incX(n: number): void;
@@ -21,7 +22,8 @@ export default class State {
     decY(n: number): void;
     getFontSize(): number;
     chars_width(chars?: string, fontSize?: number): number;
-    drawText(content?: string, fontSize?: number, deltaX?: number, deltaY?: number): void;
+    drawText(content?: string, fontSize?: number, x?: number, y?: number): void;
+    drawTextDelta(content?: string, fontSize?: number, deltaX?: number, deltaY?: number): void;
     private setFontSize;
     private setFontName;
     private restoreCtx;
