@@ -11,7 +11,7 @@ width():number {
 return this.state.chars_width(this.content);    
 }
 height():number {
-return this.width() * 1.5;    
+return this.state.chars_width("Xi");    
 }
 
 draw():boolean{

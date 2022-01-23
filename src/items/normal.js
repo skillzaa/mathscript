@@ -8,7 +8,7 @@ export default class Normal extends Item {
         return this.state.chars_width(this.content);
     }
     height() {
-        return this.width() * 1.5;
+        return this.state.chars_width("Xi");
     }
     draw() {
         this.state.drawText(this.content);

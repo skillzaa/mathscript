@@ -30,12 +30,11 @@ draw(state: state): boolean {
 }
 return true;
 }
-
 add_item(item:Iitem){
 this.seg_width += item.width();   
-if (item.height() > this.seg_height){
-        this.seg_height = item.height();
-}     
+    if (item.height() > this.seg_height){
+            this.seg_height = item.height();
+    }     
 this.items.push(item);
 return item;
 }
