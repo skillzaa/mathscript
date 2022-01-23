@@ -13,7 +13,7 @@ export default class LineSeg implements ISegment {
     get_items(): ItemsFactory;
     width(): number;
     height(): number;
-    draw(state: State): boolean;
+    draw(): boolean;
     add_item(item: Iitem): Iitem;
 }
 //# sourceMappingURL=lineSeg.d.ts.map

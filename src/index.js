@@ -31,7 +31,13 @@ line.add_item(line_bot_end);
 // equation.add_segment(pwr); ????? Gooodddddd
 //==============================
 //..........................
-let frac = new Frac(state, line, line);
+let line02 = new LineSeg(state);
+let line02_item = line02.get_items().normal("a + b = c");
+line02.add_item(line02_item);
+let line03 = new LineSeg(state);
+let line03_item = line02.get_items().normal("x + y = z");
+line02.add_item(line03_item);
+let frac = new Frac(state, line02, line03);
 //..........................
 equation.add_segment(line);
 equation.add_segment(frac);

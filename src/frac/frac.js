@@ -4,11 +4,11 @@ export default class Frac {
         this.top = top;
         this.bot = bot;
     }
-    draw(state) {
-        this.top.draw(this.state);
+    draw() {
+        this.top.draw();
         this.state.incY(this.top.height());
         this.state.decX(this.top.width());
-        this.bot.draw(this.state);
+        this.bot.draw();
         return true;
     }
     width() { return 40; }
