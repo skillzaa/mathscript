@@ -1,6 +1,6 @@
 import Grid from "../grid.js";
 import State from "../design/state.js";
-import Equation from "../design/equation.js";
+import Equation from "../equation/equation.js";
 //===========================================
 let canvas = document.getElementById("crown");
 // @ts-expect-error

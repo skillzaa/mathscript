@@ -1,7 +1,7 @@
-import ISegment from "./Isegment.js";
-import State from "./state.js";
-import SegStateData from "./seg_state_data.js";
-import SegFactory from "./segFactory.js";
+import ISegment from "../design/Isegment.js";
+import State from "../design/state.js";
+import SegStateData from "../design/seg_state_data.js";
+import SegFactory from "../design/segFactory.js";
 
 export default class Equation {
 public segment_gap:number;

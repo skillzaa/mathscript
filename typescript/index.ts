@@ -1,20 +1,10 @@
 import Grid from "./grid.js";
-import State from "./design/state.js";
-import Equation from "./design/equation.js";
-//===========================================
-let canvas = document.getElementById("crown");
-// @ts-expect-error
-let ctx = canvas.getContext('2d');
-// @ts-expect-error
-let state= new State(canvas,ctx);
-
-// @ts-expect-error
-let g = new Grid(canvas);
-g.draw();
+// let g = new Grid(canvas);
+// g.draw();
+import get_equation from "./equation/get_equation.js";
 //==================Grid Ends ================
+let equation = get_equation();
 // --@ts-expect-error
-let equation = new Equation(state);
-equation.segment_gap = 50;
 let frac = equation.add_seg().frac();
 
 frac.top.add_item().lineBot();
