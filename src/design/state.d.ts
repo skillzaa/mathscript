@@ -11,17 +11,9 @@ export default class State {
     constructor(ctx: CanvasRenderingContext2D, x: number, y: number);
     getX(): number;
     getY(): number;
-    draw_line_top(): void;
-    draw_line_bot(): void;
     draw_line(startX: number, startY: number, endX: number, endY: number): void;
     set_bot_line_mid(): void;
     load_current_seg(width: number, height: number): void;
-    addX(n: number): void;
-    incX(n: number): void;
-    decX(n: number): void;
-    addY(n: number): void;
-    incY(n: number): void;
-    decY(n: number): void;
     getFontSize(): number;
     chars_width(chars?: string, fontSize?: number): number;
     drawText(content?: string, x?: number, y?: number, fontSize?: number): void;
@@ -32,5 +24,11 @@ export default class State {
     private saveCtx;
     private resetFont;
     private init_ctx;
+    addX(n: number): void;
+    private incX;
+    private decX;
+    private addY;
+    private incY;
+    private decY;
 }
 //# sourceMappingURL=state.d.ts.map

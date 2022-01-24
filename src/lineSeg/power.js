@@ -10,9 +10,9 @@ export default class Power extends Item {
         return Math.ceil(a + b);
     }
     draw() {
-        this.state.drawTextDelta(this.content);
-        let deltaX = this.state.chars_width(this.content);
-        this.state.drawTextDelta(this.power, this.state.getFontSize() / 2, deltaX);
+        this.state.drawText(this.content, this.state.getX(), this.state.getY());
+        let add_to_X = this.state.chars_width(this.content);
+        this.state.drawText(this.power, this.state.getX() + add_to_X, this.state.getY(), this.state.getFontSize() / 2);
         return true;
     }
 }

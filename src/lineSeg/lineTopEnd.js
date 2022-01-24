@@ -5,7 +5,7 @@ export default class LineTopEnd extends Item {
     }
     draw() {
         //=====add to local state
-        this.state.draw_line_top();
+        this.state.draw_line(this.state.current_seg.line_top_startX, this.state.current_seg.line_top_startY, this.state.getX(), this.state.current_seg.line_top_startY);
         return true;
     }
 }

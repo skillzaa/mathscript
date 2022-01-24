@@ -19,7 +19,11 @@ this.seg_width = 0;
 this.itemsFactory = 
 new ItemsFactory(this.state,this.insert_new_item.bind(this));
 }
+//--depricated 24-jan-2022
 add_item(){
+return this.itemsFactory;
+}
+add(){
 return this.itemsFactory;
 }
     

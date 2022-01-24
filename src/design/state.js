@@ -20,21 +20,6 @@ export default class State {
     getY() {
         return this.y;
     }
-    draw_line_top() {
-        this.ctx.strokeStyle = "red";
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.current_seg.line_top_startX, this.current_seg.line_top_startY);
-        this.ctx.lineTo(this.x, this.y);
-        this.ctx.stroke();
-    }
-    draw_line_bot() {
-        this.ctx.strokeStyle = this.strokeStyle;
-        this.ctx.fillStyle = this.fillStyle;
-        this.ctx.beginPath();
-        this.ctx.moveTo(this.current_seg.line_bot_startX, this.current_seg.line_bot_startY);
-        this.ctx.lineTo(this.x, this.current_seg.line_bot_startY);
-        this.ctx.stroke();
-    }
     draw_line(startX, startY, endX, endY) {
         //------------------------
         this.ctx.strokeStyle = this.strokeStyle;
@@ -52,26 +37,6 @@ export default class State {
         this.current_seg = new SegStateData();
         this.current_seg.width = width;
         this.current_seg.height = height;
-    }
-    //--deprecated-23-jan-2022
-    addX(n) {
-        this.x = this.x + n;
-    }
-    incX(n) {
-        this.x = this.x + n;
-    }
-    decX(n) {
-        this.x = this.x - n;
-    }
-    //--depricated 23-jan-2022
-    addY(n) {
-        this.y = this.y + n;
-    }
-    incY(n) {
-        this.y = this.y + n;
-    }
-    decY(n) {
-        this.y = this.y - n;
     }
     getFontSize() {
         return this.fontSize;
@@ -124,5 +89,25 @@ export default class State {
     init_ctx() {
         this.ctx.fillStyle = this.fillStyle;
         this.ctx.strokeStyle = this.strokeStyle;
+    }
+    //--deprecated-23-jan-2022
+    addX(n) {
+        this.x = this.x + n;
+    }
+    incX(n) {
+        this.x = this.x + n;
+    }
+    decX(n) {
+        this.x = this.x - n;
+    }
+    //--depricated 23-jan-2022
+    addY(n) {
+        this.y = this.y + n;
+    }
+    incY(n) {
+        this.y = this.y + n;
+    }
+    decY(n) {
+        this.y = this.y - n;
     }
 }

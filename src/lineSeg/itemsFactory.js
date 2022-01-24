@@ -32,7 +32,7 @@ export default class ItemsFactory {
         this.add_new_item_fn(i);
         return i;
     }
-    linetopEnd() {
+    lineTopEnd() {
         let i = new LineTopEnd(this.state);
         this.add_new_item_fn(i);
         return i;

@@ -15,7 +15,7 @@ export default class ItemsFactory {
     power(content?: string, power?: string): Power;
     normal(content?: string): Normal;
     linetop(): LineTop;
-    linetopEnd(): LineTopEnd;
+    lineTopEnd(): LineTopEnd;
     lineBot(): LineBot;
     lineBotEnd(): LineBotEnd;
     sqrt(): Sqrt;

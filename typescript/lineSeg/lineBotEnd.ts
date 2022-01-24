@@ -8,9 +8,14 @@ constructor(state:State){
 }
 draw():boolean{
     //=====add to local state
-    this.state.draw_line_bot();
+    this.state.draw_line(
+        this.state.current_seg.line_bot_startX,
+        this.state.current_seg.line_bot_startY,
+        this.state.getX(),
+        this.state.current_seg.line_bot_startY
+    )
+
     this.state.set_bot_line_mid();
-    // console.log("set_bot_line_mid",this.state);
     return true;
 }
 

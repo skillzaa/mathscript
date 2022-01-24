@@ -1,5 +1,5 @@
-import Grid from "./grid.js";
-import Equation from "./equation/equation.js";
+import Grid from "../grid.js";
+import eq from "./first_decent.js";
 //===========================================
 let canvas = document.getElementById("crown");
 canvas = canvas;
@@ -13,14 +13,11 @@ let ctx = canvas.getContext('2d');
 //@ts-expect-error
 let g = new Grid(canvas);
 //==================Grid Ends ================
-let eq = new Equation(ctx, 100, 100);
-let f = eq.add_seg().frac();
-f.top.add_item().sqrt();
-f.top.add_item().normal("a + b + c");
-f.top.add_item().sqrtEnd();
-f.bot.add_item().normal("4x");
-eq.draw();
+let eq1 = eq(ctx, 100, 100);
+let eq2 = eq(ctx, 100, 200);
 g.draw();
+eq1.draw();
+eq2.draw();
 // ???????????????????????????????
 // setInterval(function(){
 //     eq1.state.incX(1);

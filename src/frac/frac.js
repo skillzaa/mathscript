@@ -13,10 +13,6 @@ export default class Frac {
         this.state.incX(this.state.current_seg.line_bot_width / 2);
         this.state.decX(this.bot.width() / 2);
         this.bot.draw();
-        this.state.incX(this.bot.width() / 2);
-        this.state.decX(this.state.current_seg.line_bot_width / 2);
-        this.state.decY(this.top.height());
-        this.state.incX(this.top.width());
         return true;
     }
     width() {

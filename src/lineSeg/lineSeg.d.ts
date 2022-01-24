@@ -10,6 +10,7 @@ export default class LineSeg implements IDrawable {
     private state;
     constructor(state: State);
     add_item(): ItemsFactory;
+    add(): ItemsFactory;
     width(): number;
     height(): number;
     draw(): boolean;

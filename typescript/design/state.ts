@@ -32,22 +32,7 @@ public getX():number{
 public getY():number{
   return   this.y;
 }
-public draw_line_top(){
-    this.ctx.strokeStyle = "red";
-    this.ctx.beginPath();
-    this.ctx.moveTo(this.current_seg.line_top_startX,this.current_seg.line_top_startY);
-    this.ctx.lineTo(this.x ,this.y);
-    this.ctx.stroke();
-}
-public draw_line_bot(){
-    this.ctx.strokeStyle = this.strokeStyle;
-    this.ctx.fillStyle = this.fillStyle;
 
-    this.ctx.beginPath();
-    this.ctx.moveTo(this.current_seg.line_bot_startX,this.current_seg.line_bot_startY);
-    this.ctx.lineTo(this.x ,this.current_seg.line_bot_startY);
-    this.ctx.stroke();
-}
 public draw_line(startX:number,startY:number,endX:number,endY:number){
     //------------------------
     this.ctx.strokeStyle = this.strokeStyle;
@@ -68,26 +53,7 @@ public load_current_seg(width:number,height:number){
     this.current_seg.width = width;
     this.current_seg.height = height;
 }
-//--deprecated-23-jan-2022
-public addX(n:number){
-    this.x = this.x + n;
-}
-public incX(n:number){
-    this.x = this.x + n;
-}
-public decX(n:number){
-    this.x = this.x - n;
-}
-//--depricated 23-jan-2022
-public addY(n:number){
-    this.y = this.y + n;
-}
-public incY(n:number){
-    this.y = this.y + n;
-}
-public decY(n:number){
-    this.y = this.y - n;
-}
+
 public getFontSize(){
     return this.fontSize;
 }
@@ -141,6 +107,26 @@ private resetFont(){
 private init_ctx(){
     this.ctx.fillStyle = this.fillStyle;
     this.ctx.strokeStyle = this.strokeStyle;
+}
+//--deprecated-23-jan-2022
+public addX(n:number){
+    this.x = this.x + n;
+}
+private incX(n:number){
+    this.x = this.x + n;
+}
+private decX(n:number){
+    this.x = this.x - n;
+}
+//--depricated 23-jan-2022
+private addY(n:number){
+    this.y = this.y + n;
+}
+private incY(n:number){
+    this.y = this.y + n;
+}
+private decY(n:number){
+    this.y = this.y - n;
 }
 // canvas_width():number{
 //     return this.canvas.width;
