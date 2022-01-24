@@ -63,6 +63,7 @@ public drawText(content ="",x= 0,y= 0,fontSize= this.fontSize){
     this.ctx.save()
     this.ctx.strokeStyle = this.strokeStyle;
     this.ctx.fillStyle = this.fillStyle;
+    this.ctx.textBaseline = "top";
 
     let f = fontSize + "px " + this.fontName;
     this.ctx.font = f;

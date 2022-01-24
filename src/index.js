@@ -15,10 +15,12 @@ let g = new Grid(canvas);
 //==================Grid Ends ================
 let eq = new Equation(ctx);
 let f = eq.add_seg().frac();
-f.top.add_item().sqrt();
-f.top.add_item().normal("a + b + c");
-f.top.add_item().sqrtEnd();
-f.bot.add_item().normal("4x");
+f.bot.add().lineBot();
+f.top.add().sqrt();
+f.top.add().normal("a + b + c");
+f.top.add().sqrtEnd();
+f.bot.add().lineBotEnd();
+f.bot.add().normal("4x");
 eq.draw(100, 100);
 g.draw();
 // ???????????????????????????????

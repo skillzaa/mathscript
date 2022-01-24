@@ -48,6 +48,7 @@ export default class State {
         this.ctx.save();
         this.ctx.strokeStyle = this.strokeStyle;
         this.ctx.fillStyle = this.fillStyle;
+        this.ctx.textBaseline = "top";
         let f = fontSize + "px " + this.fontName;
         this.ctx.font = f;
         this.ctx.fillText(content, x, y);

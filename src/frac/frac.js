@@ -8,7 +8,7 @@ export default class Frac {
     }
     draw(x, y) {
         this.top.draw(x, y);
-        x = x - this.top.width();
+        // x = x -  this.top.width();
         x += this.state.current_seg.line_bot_width / 2;
         x -= this.bot.width() / 2;
         y = y + this.top.height();
