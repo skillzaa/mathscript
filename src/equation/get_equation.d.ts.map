@@ -1,1 +1,1 @@
-{"version":3,"file":"get_equation.d.ts","sourceRoot":"","sources":["../../typescript/equation/get_equation.ts"],"names":[],"mappings":"AACA,OAAO,QAAQ,MAAM,eAAe,CAAC;AASrC,MAAM,CAAC,OAAO,UAAU,YAAY,CAAC,CAAC,EAAC,MAAM,EAAC,CAAC,EAAC,MAAM,GAAE,QAAQ,CAQ/D"}
+{"version":3,"file":"get_equation.d.ts","sourceRoot":"","sources":["../../typescript/equation/get_equation.ts"],"names":[],"mappings":"AACA,OAAO,QAAQ,MAAM,eAAe,CAAC;AAErC,MAAM,CAAC,OAAO,UAAU,YAAY,CAAC,GAAG,EAAC,wBAAwB,EAAC,CAAC,EAAC,MAAM,EAAC,CAAC,EAAC,MAAM,GAAE,QAAQ,CAM5F"}

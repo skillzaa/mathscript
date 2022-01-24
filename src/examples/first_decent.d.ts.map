@@ -1,1 +1,1 @@
-{"version":3,"file":"first_decent.d.ts","sourceRoot":"","sources":["../../typescript/examples/first_decent.ts"],"names":[],"mappings":"AACA,MAAM,CAAC,OAAO,UAAU,EAAE,CAAC,CAAC,EAAC,MAAM,EAAC,CAAC,EAAC,MAAM,6CAY3C"}
+{"version":3,"file":"first_decent.d.ts","sourceRoot":"","sources":["../../typescript/examples/first_decent.ts"],"names":[],"mappings":"AACA,MAAM,CAAC,OAAO,UAAU,EAAE,CAAC,GAAG,EAAC,wBAAwB,EAAC,CAAC,EAAC,MAAM,EAAC,CAAC,EAAC,MAAM,6CAYxE"}
