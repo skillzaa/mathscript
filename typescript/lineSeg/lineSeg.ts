@@ -33,13 +33,13 @@ width(): number {
 height(): number {
     return this.seg_height;
 }
-draw(): boolean {
+draw(x :number,y :number): boolean {
     for (let i = 0; i < this.items.length; i++) {
         
-        let tf = this.items[i].draw();
+        let tf = this.items[i].draw(x,y);
         //--there may be control segments which may not move the x in that case dont add gap
         if (this.items[i].width() > 0){
-           this.state.incX(this.items[i].width() + this.item_gap);
+           x += (this.items[i].width() + this.item_gap);
         }
 }
 return true;

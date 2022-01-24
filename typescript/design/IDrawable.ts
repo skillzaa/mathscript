@@ -2,5 +2,5 @@
 export default interface IDrawable{
     width():number;
     height():number;
-    draw():boolean; 
+    draw(x :number, y :number):boolean; 
 }

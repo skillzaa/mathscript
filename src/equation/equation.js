@@ -1,10 +1,9 @@
 import State from "../design/state.js";
 import SegFactory from "../design/segFactory.js";
 export default class Equation {
-    constructor(ctx, x = 0, y = 0) {
+    constructor(ctx) {
         this.segments = [];
-        this.state = new State(ctx, x, y);
-        // this.state.getX+
+        this.state = new State(ctx);
         this.segments = [];
         this.segment_gap = 2;
         this.lat_width = 0;
@@ -14,15 +13,17 @@ export default class Equation {
     add_seg() {
         return this.segFactory;
     }
-    draw() {
+    draw(startX, startY) {
+        let x = startX;
+        let y = startY;
         for (let i = 0; i < this.segments.length; i++) {
             //----load next seg to state
             this.state.load_current_seg(this.segments[i].width(), this.segments[i].height());
             //----draw operation
-            let tf = this.segments[i].draw();
+            let tf = this.segments[i].draw(x, y);
             //--there may be control segments which may not move the x in that case dont add gap
             if (this.segments[i].width() > 0) {
-                this.state.addX(this.segments[i].width() + this.segment_gap);
+                x += (this.segments[i].width() + this.segment_gap);
             }
         }
         return true;

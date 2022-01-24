@@ -14,15 +14,15 @@ return this.state.chars_width(String.fromCodePoint(8730));
 height():number {
 return this.width() * 1.5;   
 }   
-draw():boolean{
+draw(x :number,y :number):boolean{
     // state.ctx.font = '50px serif';  
-    this.state.drawText(String.fromCodePoint(8730),this.state.getX(),this.state.getY());
+    this.state.drawText(String.fromCodePoint(8730),x,y);
     
     let sqrt_width = this.state.chars_width(String.fromCodePoint(8730));
 
     //=====add to local state
-    this.state.current_seg.sqrt_startX = this.state.getX() + sqrt_width;
-    this.state.current_seg.sqrt_startY = this.state.getY();
+    this.state.current_seg.sqrt_startX = x + sqrt_width;
+    this.state.current_seg.sqrt_startY = y;
     // state.ctx.restore();
     return true;
 }

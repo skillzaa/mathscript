@@ -13,13 +13,13 @@ let ctx = canvas.getContext('2d');
 //@ts-expect-error
 let g = new Grid(canvas);
 //==================Grid Ends ================
-let eq = new Equation(ctx, 100, 100);
+let eq = new Equation(ctx);
 let f = eq.add_seg().frac();
 f.top.add_item().sqrt();
 f.top.add_item().normal("a + b + c");
 f.top.add_item().sqrtEnd();
 f.bot.add_item().normal("4x");
-eq.draw();
+eq.draw(100, 100);
 g.draw();
 // ???????????????????????????????
 // setInterval(function(){

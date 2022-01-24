@@ -13,7 +13,7 @@ export default class LineSeg implements IDrawable {
     add(): ItemsFactory;
     width(): number;
     height(): number;
-    draw(): boolean;
+    draw(x: number, y: number): boolean;
     private insert_new_item;
 }
 //# sourceMappingURL=lineSeg.d.ts.map

@@ -6,10 +6,10 @@ export default class LineTop extends Item {
 constructor(state:State){
     super(state)
 }
-draw():boolean{
+draw(x :number,y :number):boolean{
     //=====add to local state
-    this.state.current_seg.line_top_startX = this.state.getX();
-    this.state.current_seg.line_top_startY = this.state.getY();
+    this.state.current_seg.line_top_startX = x;
+    this.state.current_seg.line_top_startY = y;
     // console.log(this.state);
     return true;
 }

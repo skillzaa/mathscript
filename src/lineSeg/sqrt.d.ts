@@ -5,6 +5,6 @@ export default class Sqrt implements IDrawable {
     constructor(state: State);
     width(): number;
     height(): number;
-    draw(): boolean;
+    draw(x: number, y: number): boolean;
 }
 //# sourceMappingURL=sqrt.d.ts.map

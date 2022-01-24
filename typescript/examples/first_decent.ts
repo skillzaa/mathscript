@@ -1,6 +1,6 @@
 import get_equation from "../equation/get_equation.js";
 export default function eq(ctx:CanvasRenderingContext2D,x:number,y:number){
-let equation = get_equation(ctx,x,y)
+let equation = get_equation(ctx)
 let lseg = equation.add_seg().lineSeg();
 lseg.add_item().lineBot();
 lseg.add_item().linetop();

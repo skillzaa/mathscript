@@ -9,10 +9,10 @@ export default class Power extends Item {
         let b = this.state.chars_width(this.power, this.state.getFontSize() / 2);
         return Math.ceil(a + b);
     }
-    draw() {
-        this.state.drawText(this.content, this.state.getX(), this.state.getY());
+    draw(x, y) {
+        this.state.drawText(this.content, x, y);
         let add_to_X = this.state.chars_width(this.content);
-        this.state.drawText(this.power, this.state.getX() + add_to_X, this.state.getY(), this.state.getFontSize() / 2);
+        this.state.drawText(this.power, x + add_to_X, y, this.state.getFontSize() / 2);
         return true;
     }
 }

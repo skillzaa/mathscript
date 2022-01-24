@@ -8,13 +8,13 @@ export default class Sqrt {
     height() {
         return this.width() * 1.5;
     }
-    draw() {
+    draw(x, y) {
         // state.ctx.font = '50px serif';  
-        this.state.drawText(String.fromCodePoint(8730), this.state.getX(), this.state.getY());
+        this.state.drawText(String.fromCodePoint(8730), x, y);
         let sqrt_width = this.state.chars_width(String.fromCodePoint(8730));
         //=====add to local state
-        this.state.current_seg.sqrt_startX = this.state.getX() + sqrt_width;
-        this.state.current_seg.sqrt_startY = this.state.getY();
+        this.state.current_seg.sqrt_startX = x + sqrt_width;
+        this.state.current_seg.sqrt_startY = y;
         // state.ctx.restore();
         return true;
     }

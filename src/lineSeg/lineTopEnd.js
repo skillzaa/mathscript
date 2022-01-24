@@ -3,9 +3,9 @@ export default class LineTopEnd extends Item {
     constructor(state) {
         super(state);
     }
-    draw() {
+    draw(x, y) {
         //=====add to local state
-        this.state.draw_line(this.state.current_seg.line_top_startX, this.state.current_seg.line_top_startY, this.state.getX(), this.state.current_seg.line_top_startY);
+        this.state.draw_line(this.state.current_seg.line_top_startX, this.state.current_seg.line_top_startY, x, this.state.current_seg.line_top_startY);
         return true;
     }
 }

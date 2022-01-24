@@ -14,8 +14,8 @@ height():number {
 return this.state.chars_width("Xi");    
 }
 
-draw():boolean{
-this.state.drawText(this.content,this.state.getX(),this.state.getY());    
+draw(x :number,y :number):boolean{
+this.state.drawText(this.content,x,y);    
 return true;
 }
 

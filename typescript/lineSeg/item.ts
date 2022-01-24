@@ -16,7 +16,7 @@ height():number {
 return 0;    
 }
 
-draw():boolean{
+draw(x :number,y :number):boolean{
 return true;
 }
 

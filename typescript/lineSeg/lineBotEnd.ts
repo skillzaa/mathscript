@@ -6,16 +6,16 @@ export default class LineBotEnd extends Item {
 constructor(state:State){
     super(state)
 }
-draw():boolean{
+draw(x :number,y :number):boolean{
     //=====add to local state
     this.state.draw_line(
         this.state.current_seg.line_bot_startX,
         this.state.current_seg.line_bot_startY,
-        this.state.getX(),
+        x,
         this.state.current_seg.line_bot_startY
     )
 
-    this.state.set_bot_line_mid();
+    this.state.set_bot_line_mid(x,y);
     return true;
 }
 

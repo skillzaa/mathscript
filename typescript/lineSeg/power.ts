@@ -16,12 +16,12 @@ return Math.ceil(a+b);
 }
 
 
-draw():boolean {
-    this.state.drawText(this.content,this.state.getX(),this.state.getY());
+draw(x :number,y :number):boolean {
+    this.state.drawText(this.content,x,y);
     let add_to_X = this.state.chars_width(this.content);
     this.state.drawText(this.power,
-        this.state.getX() + add_to_X,
-        this.state.getY(),
+        x + add_to_X,
+        y,
         this.state.getFontSize()/2 );
 return true;        
 }

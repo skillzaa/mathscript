@@ -7,7 +7,7 @@ export default class Frac implements IDrawable {
     bot: LineSeg;
     divider_gap: number;
     constructor(state: State);
-    draw(): boolean;
+    draw(x: number, y: number): boolean;
     width(): number;
     height(): number;
 }

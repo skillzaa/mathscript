@@ -6,6 +6,6 @@ export default class Item implements IDrawable {
     constructor(state: State, content?: string);
     width(): number;
     height(): number;
-    draw(): boolean;
+    draw(x: number, y: number): boolean;
 }
 //# sourceMappingURL=item.d.ts.map

@@ -6,13 +6,13 @@ export default class Frac {
         this.bot = new LineSeg(this.state);
         this.divider_gap = 2;
     }
-    draw() {
-        this.top.draw();
-        this.state.incY(this.top.height());
-        this.state.decX(this.top.width());
-        this.state.incX(this.state.current_seg.line_bot_width / 2);
-        this.state.decX(this.bot.width() / 2);
-        this.bot.draw();
+    draw(x, y) {
+        this.top.draw(x, y);
+        x = x - this.top.width();
+        x += this.state.current_seg.line_bot_width / 2;
+        x -= this.bot.width() / 2;
+        y = y + this.top.height();
+        this.bot.draw(x, y);
         return true;
     }
     width() {

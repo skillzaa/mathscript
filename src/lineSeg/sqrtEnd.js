@@ -8,8 +8,8 @@ export default class SqrtEnd {
     height() {
         return 0;
     }
-    draw() {
-        this.state.draw_line(this.state.current_seg.sqrt_startX, this.state.current_seg.sqrt_startY, this.state.getX(), this.state.getY());
+    draw(x, y) {
+        this.state.draw_line(this.state.current_seg.sqrt_startX, this.state.current_seg.sqrt_startY, x, y);
         return true;
     }
 } //sqrt    

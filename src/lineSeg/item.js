@@ -9,7 +9,7 @@ export default class Item {
     height() {
         return 0;
     }
-    draw() {
+    draw(x, y) {
         return true;
     }
 }

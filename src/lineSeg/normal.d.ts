@@ -5,6 +5,6 @@ export default class Normal extends Item {
     constructor(state: State, content?: string);
     width(): number;
     height(): number;
-    draw(): boolean;
+    draw(x: number, y: number): boolean;
 }
 //# sourceMappingURL=normal.d.ts.map

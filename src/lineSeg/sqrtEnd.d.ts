@@ -5,6 +5,6 @@ export default class SqrtEnd implements IDrawable {
     constructor(state: State);
     width(): number;
     height(): number;
-    draw(): boolean;
+    draw(x: number, y: number): boolean;
 }
 //# sourceMappingURL=sqrtEnd.d.ts.map

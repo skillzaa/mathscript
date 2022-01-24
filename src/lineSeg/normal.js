@@ -10,8 +10,8 @@ export default class Normal extends Item {
     height() {
         return this.state.chars_width("Xi");
     }
-    draw() {
-        this.state.drawText(this.content, this.state.getX(), this.state.getY());
+    draw(x, y) {
+        this.state.drawText(this.content, x, y);
         return true;
     }
 }

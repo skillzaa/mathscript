@@ -7,9 +7,9 @@ export default class Equation {
     private lat_width;
     private lat_height;
     private segFactory;
-    constructor(ctx: CanvasRenderingContext2D, x?: number, y?: number);
+    constructor(ctx: CanvasRenderingContext2D);
     add_seg(): SegFactory;
-    draw(): boolean;
+    draw(startX: number, startY: number): boolean;
     width(): number;
     height(): number;
     private add_new_segment;
