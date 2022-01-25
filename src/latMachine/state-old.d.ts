@@ -13,4 +13,4 @@ export default class DrawState {
     drawText(instr: DrawInstr, x: number, y: number): void;
     drawSpecialChar(instr: DrawInstr, x: number, y: number): void;
 }
-//# sourceMappingURL=drawState.d.ts.map
+//# sourceMappingURL=state-old.d.ts.map

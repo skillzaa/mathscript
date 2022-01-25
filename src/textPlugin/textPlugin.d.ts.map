@@ -1,0 +1,1 @@
+{"version":3,"file":"textPlugin.d.ts","sourceRoot":"","sources":["../../typescript/textPlugin/textPlugin.ts"],"names":[],"mappings":"AACA,OAAO,SAAS,MAAM,wBAAwB,CAAC;AAC/C,OAAO,KAAK,MAAM,oBAAoB,CAAC;AAEvC,MAAM,CAAC,OAAO,OAAO,UAAW,YAAW,SAAS;IAEpD,IAAI,CAAC,KAAK,EAAC,KAAK,EAAE,CAAC,EAAE,MAAM,EAAE,CAAC,EAAE,MAAM,GAAG,OAAO;IAMhD,KAAK,IAAI,MAAM;IAGf,MAAM,IAAI,MAAM;CAGf"}

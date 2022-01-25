@@ -1,9 +1,8 @@
-import DrawState from "./drawState.js";
 import DrawInstr from "./drawInstr.js";
 export default class DrawEngine {
-    state: DrawState;
+    private state;
     instr: DrawInstr[];
-    constructor(instr: DrawInstr[]);
-    run(): void;
+    constructor(instr?: DrawInstr[]);
+    draw(startingX?: number): void;
 }
 //# sourceMappingURL=drawEngine.d.ts.map

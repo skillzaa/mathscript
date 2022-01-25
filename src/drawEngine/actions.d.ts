@@ -1,5 +1,6 @@
 export declare enum Actions {
     DrawText = "DRAWTEXT",
-    Drawline = "DRAWLINE"
+    Drawline = "DRAWLINE",
+    DrawSpecialChar = "DRAWSPECIALCHAR"
 }
 //# sourceMappingURL=actions.d.ts.map

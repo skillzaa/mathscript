@@ -19,7 +19,7 @@ this.strokeStyle = "#1e1eea";
 this.fontSize = 100;
 this.fontName = "serif";
 }
-public draw_line(startX:number,startY:number,endX:number,endY:number){
+public draw_line(instr :DrawInstr, startX:number,startY:number,endX:number,endY:number){
     //------------------------
     this.ctx.strokeStyle = this.strokeStyle;
     this.ctx.fillStyle = this.fillStyle;
@@ -48,6 +48,17 @@ public drawText(instr :DrawInstr,x:number,y:number){
     let f = instr.fontSize + "px " + this.fontName;
     this.ctx.font = f;
     this.ctx.fillText(instr.content, x, y);
+    this.ctx.restore();
+}
+public drawSpecialChar(instr :DrawInstr,x:number,y:number){
+    this.ctx.save()
+    this.ctx.strokeStyle = instr.strokeStyle;
+    this.ctx.fillStyle = instr.strokeStyle;
+    this.ctx.textBaseline = "top";
+
+    let f = instr.fontSize + "px " + this.fontName;
+    this.ctx.font = f;
+    this.ctx.fillText(String.fromCodePoint(instr.codePoint), x, y);
     this.ctx.restore();
 }
 }

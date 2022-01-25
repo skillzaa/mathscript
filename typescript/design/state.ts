@@ -94,11 +94,6 @@ private init_ctx(){
     this.ctx.fillStyle = this.fillStyle;
     this.ctx.strokeStyle = this.strokeStyle;
 }
-// // canvas_width():number{
-//     return this.canvas.width;
-// }
-// canvas_height():number{
-//     return this.canvas.height;
-// }
+
 
 }
