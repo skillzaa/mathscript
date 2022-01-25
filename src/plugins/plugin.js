@@ -1,10 +1,10 @@
 export default class Plugin {
     constructor() {
     }
-    width() {
+    width(state) {
         return 0;
     }
-    height() {
+    height(state) {
         return 0;
     }
     draw(state, x, y) {

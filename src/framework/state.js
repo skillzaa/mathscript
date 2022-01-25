@@ -10,6 +10,12 @@ export default class State {
         this.fontSize = 100;
         this.fontName = "serif";
     }
+    getFontSize() {
+        return this.fontSize;
+    }
+    setFontSize(n) {
+        this.fontSize = n;
+    }
     chars_width(chars = "", fontSize = this.fontSize, fontName = this.fontName) {
         this.ctx.save();
         //dont miss gap "px_"
@@ -20,6 +26,8 @@ export default class State {
         return Math.ceil(m);
     }
     draw_line(startX, startY, endX, endY) {
+        let f = this.fontSize + "px " + this.fontName;
+        this.ctx.font = f;
         this.ctx.beginPath();
         this.ctx.moveTo(startX, startY);
         this.ctx.lineTo(endX, endY);

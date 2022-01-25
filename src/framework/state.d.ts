@@ -7,6 +7,8 @@ export default class State {
     fillStyle: string;
     strokeStyle: string;
     constructor();
+    getFontSize(): number;
+    setFontSize(n: number): void;
     chars_width(chars?: string, fontSize?: number, fontName?: string): number;
     draw_line(startX: number, startY: number, endX: number, endY: number): void;
     drawText(content: string, x: number, y: number): void;

@@ -5,10 +5,10 @@ export default class TextPlugin {
         state.drawText("framework", 100, 100);
         return true;
     }
-    width() {
-        return 2;
+    width(state) {
+        return state.chars_width("framework");
     }
-    height() {
-        return 4;
+    height(state) {
+        return state.chars_width("framework");
     }
 }

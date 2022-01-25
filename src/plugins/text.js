@@ -1,5 +1,5 @@
 import Plugin from "./plugin.js";
-export default class Normal extends Plugin {
+export default class Text extends Plugin {
     constructor(content) {
         super();
         this.content = content;

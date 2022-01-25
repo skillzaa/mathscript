@@ -2,17 +2,17 @@ import IDrawable from "../framework/IDrawable.js";
 import State from "../framework/state.js";
 
 export default class Plugin implements IDrawable {
-
 constructor (){
+
 }
-width():number {
+width(state :State):number {
 return 0;    
 }
-height():number {
+height(state :State):number {
 return 0;    
 }
 
-draw(state :State, x :number,y :number):boolean{
+draw(state :State,x :number,y :number):boolean{
 return true;
 }
 

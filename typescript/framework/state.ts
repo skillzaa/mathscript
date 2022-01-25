@@ -18,6 +18,13 @@ this.strokeStyle = "#1e1eea";
 this.fontSize = 100;
 this.fontName = "serif";
 }
+
+public getFontSize(){
+    return this.fontSize;
+}
+public setFontSize(n:number){
+    this.fontSize = n;
+}
 public chars_width(chars="",fontSize =this.fontSize , fontName=this.fontName){
 this.ctx.save();
 //dont miss gap "px_"
@@ -28,6 +35,9 @@ this.ctx.restore();
 return Math.ceil(m);    
 }
 public draw_line(startX:number,startY:number,endX:number,endY:number){
+    let f = this.fontSize + "px " + this.fontName;
+    this.ctx.font = f;
+
     this.ctx.beginPath();
     this.ctx.moveTo(startX,startY);
     this.ctx.lineTo(endX,endY);

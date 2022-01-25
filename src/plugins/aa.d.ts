@@ -1,10 +1,10 @@
 import State from "../framework/state.js";
 import Plugin from "./plugin.js";
-export default class Normal extends Plugin {
+export default class SScript extends Plugin {
     content: string;
-    constructor(content: string);
+    power: string;
+    constructor(content?: string, power?: string);
     width(state: State): number;
-    height(state: State): number;
     draw(state: State, x: number, y: number): boolean;
 }
-//# sourceMappingURL=normal.d.ts.map
+//# sourceMappingURL=aa.d.ts.map

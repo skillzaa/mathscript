@@ -2,7 +2,7 @@ import IDrawable from "../framework/IDrawable";
 import State from "../framework/state";
 export default class TextPlugin implements IDrawable {
     draw(state: State, x: number, y: number): boolean;
-    width(): number;
-    height(): number;
+    width(state: State): number;
+    height(state: State): number;
 }
 //# sourceMappingURL=textPlugin.d.ts.map
