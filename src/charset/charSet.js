@@ -86,4 +86,5 @@ for (let i = 0; i < charSet.length; i++) {
             break;
     }
 }
-console.log("charSet", charSet);
+console.log("Font = ", state.getFontSize());
+console.log("charSet Font = ", charSet);

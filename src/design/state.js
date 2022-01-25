@@ -7,7 +7,7 @@ export default class State {
         this.fillStyle = "#1e1eea";
         this.strokeStyle = "#1e1eea";
         this.current_seg = new SegStateData();
-        this.fontSize = 50;
+        this.fontSize = 100;
         this.fontName = "serif";
         //--need to be changed
         this.init_ctx();
@@ -35,10 +35,10 @@ export default class State {
     getFontSize() {
         return this.fontSize;
     }
-    chars_width(chars = "", fontSize = this.fontSize) {
+    chars_width(chars = "", fontSize = this.fontSize, fontName = this.fontName) {
         this.ctx.save();
         //dont miss gap "px_"
-        let f = fontSize + "px " + this.fontName;
+        let f = fontSize + "px " + fontName;
         this.ctx.font = f;
         let m = this.ctx.measureText(chars).width;
         this.ctx.restore();

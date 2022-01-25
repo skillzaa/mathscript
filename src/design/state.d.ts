@@ -11,7 +11,7 @@ export default class State {
     set_bot_line_mid(x: number, y: number): void;
     load_current_seg(width: number, height: number): void;
     getFontSize(): number;
-    chars_width(chars?: string, fontSize?: number): number;
+    chars_width(chars?: string, fontSize?: number, fontName?: string): number;
     drawText(content?: string, x?: number, y?: number, fontSize?: number): void;
     private setFontSize;
     private setFontName;

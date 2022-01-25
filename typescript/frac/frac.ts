@@ -15,13 +15,36 @@ this.divider_gap = 2;
 }
 
 draw(x :number,y :number): boolean {
-    this.top.draw(x,y);
-    // x = x -  this.top.width();
-    x += this.state.current_seg.line_bot_width/2;
-    x -= this.bot.width()/2;
-    y = y + this.top.height();
+    this.state.drawText(String.fromCodePoint(8730),50,y,260);
+x += this.state.chars_width(String.fromCodePoint(8730),260);
 
-    this.bot.draw(x,y);
+console.log("this.state.chars_width(String.fromCodePoint(8730),260)",this.state.chars_width(String.fromCodePoint(8730),260));
+
+    if (this.top.width() > this.bot.width()){
+        this.top.draw(x,y);
+        this.state.draw_line(x,y + this.top.height(),
+        x + this.top.width(),y + this.top.height() );
+
+let botX = (x + this.top.width()/2) - (this.bot.width()/2);    
+        this.bot.draw(
+            botX,
+            y + this.top.height()+ 8); 
+    
+    }else {
+        this.top.draw(
+            ((x + this.bot.width()/2) - (this.top.width()/2)),
+            y); 
+
+        this.bot.draw(x,y + this.top.height());
+        this.state.draw_line(
+            x,
+            y + (this.top.height()-7),
+        x + this.bot.width() + 5,
+        y + (this.top.height()-7) );
+
+    }
+
+    
     return true
 }
 width():number{
