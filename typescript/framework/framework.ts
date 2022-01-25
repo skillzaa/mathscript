@@ -16,7 +16,11 @@ this.gap = 5;
 draw(x:number=0,y:number=0):boolean{    
 
 for (let i = 0; i < this.items.length; i++) {
+        //--save ctx
+        this.state.ctx.save();
         this.items[i].draw(this.state,x,y);
+        this.state.ctx.restore();
+
         if (this.items[i].width() > 0){
                 x += this.items[i].width() + this.gap;
         }

@@ -1,4 +1,4 @@
-import Grid from "./grid.js";
+// import Grid from "./gridPlugin/grid.js";
 import Equation from "./equation/equation.js";
 //===========================================
 let canvas = document.getElementById("crown");
@@ -9,8 +9,8 @@ canvas.height = window.innerHeight;
 // @ts-expect-error
 let ctx = canvas.getContext('2d');
 //===========================================
-//@ts-expect-error
-let g = new Grid(canvas);
+//--@ts-expect-error
+// let g = new Grid(canvas);
 //==================Grid Ends ================
 let eq = new Equation(ctx);
 let f = eq.add_seg().frac();
@@ -26,7 +26,7 @@ f.top.add().power("x", "3");
 f.top.add().sqrtEnd();
 f.top.add().power(")", "4/3");
 f.top.add().normal(" + (((3c)))");
-g.draw();
+// g.draw();
 eq.draw(100, 100);
 // ???????????????????????????????
 // setInterval(function(){

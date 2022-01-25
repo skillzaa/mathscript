@@ -1,4 +1,4 @@
-import Grid from "../grid.js";
+import Grid from "../plugins/grid.js";
 import eq from "./first_decent.js";
 //===========================================
 let canvas = document.getElementById("crown");
@@ -15,7 +15,7 @@ let g = new Grid(canvas);
 //==================Grid Ends ================
 let eq1 = eq(ctx,100,100);
 let eq2 = eq(ctx,100,200);
-g.draw();
+// g.draw();
 eq1.draw(100,100);
 eq2.draw(100,200);
 // ???????????????????????????????

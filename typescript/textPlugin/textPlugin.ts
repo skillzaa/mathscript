@@ -6,6 +6,7 @@ export default class TextPlugin implements IDrawable {
 
 draw(state:State, x: number, y: number): boolean {
     state.fontSize = 100;
+    // state.ctx.fillStyle = "#ef0707";
     state.drawText("framework",100,100);
     return true;
 }    

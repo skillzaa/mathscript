@@ -1,17 +1,4 @@
 export default class Grid {
-    draw(state, x, y) {
-        state.fontSize = 100;
-        state.drawText("framework", 100, 100);
-        return true;
-    }
-    width() {
-        return 2;
-    }
-    height() {
-        return 4;
-    }
-}
-export class GridX {
     constructor(canvas) {
         this.canvas = canvas;
         //@ts-expect-error    

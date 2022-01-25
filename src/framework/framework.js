@@ -8,7 +8,10 @@ export default class Framework {
     //--function arguments shd be arguments and not classes unless required absoliutely.
     draw(x = 0, y = 0) {
         for (let i = 0; i < this.items.length; i++) {
+            //--save ctx
+            this.state.ctx.save();
             this.items[i].draw(this.state, x, y);
+            this.state.ctx.restore();
             if (this.items[i].width() > 0) {
                 x += this.items[i].width() + this.gap;
             }
