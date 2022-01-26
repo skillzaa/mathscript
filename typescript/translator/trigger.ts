@@ -8,7 +8,8 @@ this.lookfor ="";
 }
 
 callback(code: string, current_index: number): boolean {
-    console.log("Trigger call back called");
+
+    console.log("Trigger is" + this.lookfor,code,current_index);
     return true;
 }
 

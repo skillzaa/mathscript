@@ -19,7 +19,8 @@ for (let t = 0; t < this.triggers.length; t++) {
             const chars = this.code.substring(c,  c + noOfChars);
 
             if (chars == trigger.lookfor){
-                console.log("found", trigger.lookfor);
+                // console.log("found", trigger.lookfor);
+                trigger.callback(this.code,c);
             }
         
     }

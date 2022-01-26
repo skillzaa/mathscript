@@ -3,7 +3,7 @@ export default class Trigger {
         this.lookfor = "";
     }
     callback(code, current_index) {
-        console.log("Trigger call back called");
+        console.log("Trigger is" + this.lookfor, code, current_index);
         return true;
     }
 }

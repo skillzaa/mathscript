@@ -11,7 +11,8 @@ export default class Interpreter {
             for (let c = 0; c < this.code.length; c++) {
                 const chars = this.code.substring(c, c + noOfChars);
                 if (chars == trigger.lookfor) {
-                    console.log("found", trigger.lookfor);
+                    // console.log("found", trigger.lookfor);
+                    trigger.callback(this.code, c);
                 }
             }
         }
