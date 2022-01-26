@@ -1,4 +1,4 @@
-import Plugin from "./plugin.js";
+import Plugin from "../plugin/plugin.js";
 export default class Text extends Plugin {
     constructor(content) {
         super();
