@@ -11,7 +11,9 @@ export default class Framework {
             //--save ctx
             this.state.ctx.save();
             this.items[i].draw(this.state, x, y);
+            //--keep both unless resetCtx has all items
             this.state.ctx.restore();
+            this.state.resetCtx();
             if (this.items[i].width(this.state) > 0) {
                 x += this.items[i].width(this.state) + this.gap;
             }

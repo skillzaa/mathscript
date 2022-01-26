@@ -3,10 +3,10 @@
 export default class State {
 canvas:HTMLCanvasElement;
 ctx: CanvasRenderingContext2D;
-public fontName :string;
-public fontSize :number;
-public fillStyle :string;
-public strokeStyle :string;
+private fontName :string;
+private fontSize :number;
+private fillStyle :string;
+private strokeStyle :string;
 
 constructor(){
 // @ts-expect-error    
@@ -22,9 +22,15 @@ this.fontName = "serif";
 public getFontSize(){
     return this.fontSize;
 }
-public setFontSize(n:number){
-    this.fontSize = n;
+public resetCtx(){
+this.ctx.font = this.fontSize + "px " + this.fontName;
 }
+public setFont(fontSize=this.fontSize,fontName=this.fontName){
+this.ctx.font = fontSize + "px " + fontName;
+}
+// public setFontSize(n:number){
+//     this.fontSize = n;
+// }
 public chars_width(chars="",fontSize =this.fontSize , fontName=this.fontName){
 this.ctx.save();
 //dont miss gap "px_"
@@ -35,8 +41,8 @@ this.ctx.restore();
 return Math.ceil(m);    
 }
 public draw_line(startX:number,startY:number,endX:number,endY:number){
-    let f = this.fontSize + "px " + this.fontName;
-    this.ctx.font = f;
+    // let f = this.fontSize + "px " + this.fontName;
+    // this.ctx.font = f;
 
     this.ctx.beginPath();
     this.ctx.moveTo(startX,startY);
@@ -44,8 +50,8 @@ public draw_line(startX:number,startY:number,endX:number,endY:number){
     this.ctx.stroke();
 }
 public drawText(content:string,x:number,y:number){
-let f = this.fontSize + "px " + this.fontName;
-this.ctx.font = f;
+// let f = this.fontSize + "px " + this.fontName;
+// this.ctx.font = f;
 
     //--must
     this.ctx.textBaseline = "top";

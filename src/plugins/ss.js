@@ -14,9 +14,8 @@ export default class SS extends Plugin {
         state.drawText(this.content, x, y);
         let add_to_X = state.chars_width(this.content);
         // state.ctx.font = "20px serif";
-        state.setFontSize(35);
+        state.setFont(35);
         state.drawText(this.power, x + add_to_X, y);
-        state.setFontSize(100);
         return true;
     }
 }

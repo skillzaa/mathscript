@@ -1,4 +1,4 @@
-import Plugin from "./plugin.js";
+import Plugin from "../plugin/plugin.js";
 import State from "../framework/state.js";
 
 export default class Grid extends Plugin {

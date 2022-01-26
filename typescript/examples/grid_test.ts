@@ -8,7 +8,7 @@ f.gap = 15;
 
 let grid = new Grid();
 let ss = new SS("X","2");
-let normal2 = new Text("more ...");
+let normal2 = new Text("a + b = c");
 f.add_item(grid);
 f.add_item(ss);
 f.add_item(normal2);

@@ -2,13 +2,14 @@
 export default class State {
     canvas: HTMLCanvasElement;
     ctx: CanvasRenderingContext2D;
-    fontName: string;
-    fontSize: number;
-    fillStyle: string;
-    strokeStyle: string;
+    private fontName;
+    private fontSize;
+    private fillStyle;
+    private strokeStyle;
     constructor();
     getFontSize(): number;
-    setFontSize(n: number): void;
+    resetCtx(): void;
+    setFont(fontSize?: number, fontName?: string): void;
     chars_width(chars?: string, fontSize?: number, fontName?: string): number;
     draw_line(startX: number, startY: number, endX: number, endY: number): void;
     drawText(content: string, x: number, y: number): void;

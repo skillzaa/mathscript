@@ -1,5 +1,5 @@
 import State from "../framework/state.js";
-import Plugin from "./plugin.js";
+import Plugin from "../plugin/plugin.js";
 
 export default class Text extends Plugin {
 content:string;

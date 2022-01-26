@@ -13,9 +13,15 @@ export default class State {
     getFontSize() {
         return this.fontSize;
     }
-    setFontSize(n) {
-        this.fontSize = n;
+    resetCtx() {
+        this.ctx.font = this.fontSize + "px " + this.fontName;
     }
+    setFont(fontSize = this.fontSize, fontName = this.fontName) {
+        this.ctx.font = fontSize + "px " + fontName;
+    }
+    // public setFontSize(n:number){
+    //     this.fontSize = n;
+    // }
     chars_width(chars = "", fontSize = this.fontSize, fontName = this.fontName) {
         this.ctx.save();
         //dont miss gap "px_"
@@ -26,16 +32,16 @@ export default class State {
         return Math.ceil(m);
     }
     draw_line(startX, startY, endX, endY) {
-        let f = this.fontSize + "px " + this.fontName;
-        this.ctx.font = f;
+        // let f = this.fontSize + "px " + this.fontName;
+        // this.ctx.font = f;
         this.ctx.beginPath();
         this.ctx.moveTo(startX, startY);
         this.ctx.lineTo(endX, endY);
         this.ctx.stroke();
     }
     drawText(content, x, y) {
-        let f = this.fontSize + "px " + this.fontName;
-        this.ctx.font = f;
+        // let f = this.fontSize + "px " + this.fontName;
+        // this.ctx.font = f;
         //--must
         this.ctx.textBaseline = "top";
         this.ctx.fillText(content, x, y);
