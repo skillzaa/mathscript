@@ -8,6 +8,7 @@ export default class RawItem {
     content: string;
     fontSize: number;
     pairId: number;
+    completed: boolean;
     x: number;
     y: number;
     constructor();

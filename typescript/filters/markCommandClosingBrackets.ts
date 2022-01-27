@@ -8,7 +8,7 @@ for (let i = 0; i < code.length; i++) {
     const element = code[i];
 if (element.itemType == ItemType.CommandOpen){
     let result = findClosingBracket(code,i);
-    console.log("result ",result);
+    // console.log("result ",result);
 }
 }
 

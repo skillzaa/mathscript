@@ -7,7 +7,7 @@ export default function markCommandClosingBrackets(code) {
         const element = code[i];
         if (element.itemType == ItemType.CommandOpen) {
             let result = findClosingBracket(code, i);
-            console.log("result ", result);
+            // console.log("result ",result);
         }
     }
     return code;

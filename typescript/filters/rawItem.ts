@@ -10,6 +10,7 @@ itemType:ItemType;
 content:string;
 fontSize:number;
 pairId:number;
+completed:boolean;
 x:number;
 y:number;
 constructor(){
@@ -18,6 +19,7 @@ constructor(){
     this.fontSize = 100;
     this.x = 0;
     this.y = 0;
+    this.completed = false;
     this.itemType = ItemType.data;
 }
 }

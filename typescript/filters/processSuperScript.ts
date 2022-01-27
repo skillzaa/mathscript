@@ -6,10 +6,10 @@ let state = false;
 
 for (let i = 0; i < code.length; i++) {
     let item = code[i];
-    if (item.content == "\\p("){
+    if (item.content == "\\p(" && item.itemType == ItemType.CommandOpen){
         state = true;
     }
-    if (state == true && item.content == ")"){
+    if (state == true && item.content == "\\p(End)"){
         state = false;
     }
     if (state == true){

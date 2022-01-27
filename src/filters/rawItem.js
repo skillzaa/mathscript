@@ -11,6 +11,7 @@ export default class RawItem {
         this.fontSize = 100;
         this.x = 0;
         this.y = 0;
+        this.completed = false;
         this.itemType = ItemType.data;
     }
 }
