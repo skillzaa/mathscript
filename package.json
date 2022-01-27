@@ -1,5 +1,5 @@
 {
-  "name": "equationengine",
+  "name": "mathscript",
   "version": "0.0.1",
   "description": "A lib to write mathematical equations on HTML5 canvas",
   "main": "index.js",

@@ -1,0 +1,2 @@
+- i need trigger object (command) which will be pluged into the interpreter each trigger when triggered will get its data inside its parenthesis- that data can be the processed by the trigger object.
+- i can create many commands and then add them to interpreter.

@@ -1,0 +1,1 @@
+{"version":3,"file":"trigger.d.ts","sourceRoot":"","sources":["../typescript/trigger.ts"],"names":[],"mappings":"AAAA,OAAO,QAAQ,MAAM,eAAe,CAAA;AAGpC,MAAM,CAAC,OAAO,OAAO,OAAQ,YAAW,QAAQ;IAChD,OAAO,EAAC,MAAM,CAAC;;IAKf,QAAQ,CAAC,IAAI,EAAE,MAAM,EAAE,aAAa,EAAE,MAAM,GAAG,OAAO;CAQrD"}

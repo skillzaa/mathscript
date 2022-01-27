@@ -1,1 +1,0 @@
-{"version":3,"file":"interpreter.d.ts","sourceRoot":"","sources":["../../typescript/translator/interpreter.ts"],"names":[],"mappings":"AAAA,OAAO,QAAQ,MAAM,eAAe,CAAA;AAEpC,MAAM,CAAC,OAAO,OAAO,WAAW;IAC5B,IAAI,EAAC,MAAM,CAAC;IACZ,QAAQ,EAAC,QAAQ,EAAE,CAAC;gBAEZ,IAAI,GAAC,MAAS;IAM1B,GAAG;CAkBF"}

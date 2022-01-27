@@ -1,7 +1,7 @@
 import { CharType } from "./charType.js";
 import CharDataTempl from "./charDataTempl.js";
 import addChar from "./addChar.js";
-import State from "../design/state.js"
+// import State from "../design/state.js"
 let charSet:CharDataTempl[] = [];
 //======================================
 charSet.push(addChar("a",CharType.Alphanumeric));
