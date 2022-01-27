@@ -1,4 +1,3 @@
-// import CodeItem from "./codeItem.js";
 export default class Interpreter {
     constructor(code = "") {
         this.code = code;

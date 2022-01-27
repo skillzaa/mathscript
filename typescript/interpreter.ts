@@ -1,5 +1,5 @@
 import ITrigger from "./ITrigger.js"
-// import CodeItem from "./codeItem.js";
+import RawItem , {ItemType} from "./filters/rawItem.js";
 
 export default class Interpreter {
     code:string;
@@ -23,6 +23,7 @@ for (let c = 0; c < this.code.length; c++) {
     
 }    
 }
+
 // run(){
 // for (let t = 0; t < this.triggers.length; t++) {
 //     const trigger = this.triggers[t];

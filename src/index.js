@@ -1,7 +1,11 @@
-import Trigger from "./trigger.js";
-import Interpreter from "./interpreter.js";
-let inter = new Interpreter("brother \\asked a very good \\question");
-let t = new Trigger();
-t.lookfor = "brother";
-inter.triggers.push(t);
-inter.run();
+import scriptToRaw from "./filters/scriptToRaw.js";
+import markCommandClosingBrackets from "./filters/markCommandClosingBrackets.js";
+let script = "a\\p(2)+\\sqrt(b\\p(2))+\\sqrt(34)";
+let scripttoraw = scriptToRaw(script);
+// console.log("scripttoraw",scripttoraw);
+let markclosing = markCommandClosingBrackets(scripttoraw);
+console.log("markclosing", markclosing);
+// // let second = markCommandClosingAll(first);
+// let second = markCommandClosingAll(first);
+// console.log("markclosing",markclosing);
+// let ssprocessed = processSuperScript(first);
