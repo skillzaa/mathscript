@@ -1,1 +1,1 @@
-{"version":3,"file":"markCommandClosingBrackets.d.ts","sourceRoot":"","sources":["../../typescript/filters/markCommandClosingBrackets.ts"],"names":[],"mappings":"AAAA,OAAO,OAAoB,MAAM,cAAc,CAAC;AAEhD,MAAM,CAAC,OAAO,UAAU,0BAA0B,CAAC,IAAI,EAAC,OAAO,EAAE,GAAE,OAAO,EAAE,CAa3E"}
+{"version":3,"file":"markCommandClosingBrackets.d.ts","sourceRoot":"","sources":["../../typescript/filters/markCommandClosingBrackets.ts"],"names":[],"mappings":"AAAA,OAAO,OAAoB,MAAM,cAAc,CAAC;AAChD,MAAM,CAAC,OAAO,UAAU,0BAA0B,CAAC,IAAI,EAAC,OAAO,EAAE,GAAE,OAAO,EAAE,CAa3E"}

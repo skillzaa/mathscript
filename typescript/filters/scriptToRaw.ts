@@ -11,6 +11,7 @@ for (let i = 0; i < code.length; i++) {
         normal_mode = false;
         commandBuffer = ""; //no need
     }
+    //- just pick chars b\w \\ and ( 
     if (normal_mode == false && item == "("){
         commandBuffer += item; //add the bracket;
         normal_mode = true;

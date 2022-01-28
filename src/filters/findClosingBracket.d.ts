@@ -1,3 +1,2 @@
-import RawItem from "./rawItem.js";
-export default function findClosingBracket(code: RawItem[], index: number): RawItem[];
+export default ;
 //# sourceMappingURL=findClosingBracket.d.ts.map

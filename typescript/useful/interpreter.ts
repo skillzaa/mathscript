@@ -1,5 +1,5 @@
 import ITrigger from "./ITrigger.js"
-import RawItem , {ItemType} from "./filters/rawItem.js";
+import RawItem , {ItemType} from "../filters/rawItem.js";
 
 export default class Interpreter {
     code:string;

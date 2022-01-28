@@ -9,6 +9,7 @@ export default function scriptToRaw(code) {
             normal_mode = false;
             commandBuffer = ""; //no need
         }
+        //- just pick chars b\w \\ and ( 
         if (normal_mode == false && item == "(") {
             commandBuffer += item; //add the bracket;
             normal_mode = true;
