@@ -1,4 +1,4 @@
-import RawItem , {ItemType} from "./rawItem.js";
+import RawItem , {ItemType} from "../item.js";
 export default function markCommandClosingBrackets(code:RawItem[]):RawItem[]{
 //--1-- find a command get its data
 //--2-- find its ending bracket and insert data into that

@@ -5,7 +5,7 @@ export enum ItemType {
 }
 
 
-export default class RawItem {
+export default class Item {
 itemType:ItemType;
 content:string;
 fontSize:number;

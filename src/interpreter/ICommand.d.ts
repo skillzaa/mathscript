@@ -3,4 +3,4 @@ export default interface ICommand {
     switchEnd: string;
     callback(code: string, current_index: number): boolean;
 }
-//# sourceMappingURL=ITrigger.d.ts.map
+//# sourceMappingURL=ICommand.d.ts.map

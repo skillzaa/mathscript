@@ -1,1 +1,1 @@
-{"version":3,"file":"ITrigger.d.ts","sourceRoot":"","sources":["../typescript/ITrigger.ts"],"names":[],"mappings":"AAGA,MAAM,CAAC,OAAO,WAAW,QAAQ;IAC7B,OAAO,EAAC,MAAM,CAAC;IACf,QAAQ,CAAC,IAAI,EAAC,MAAM,EAAC,aAAa,EAAC,MAAM,GAAE,OAAO,CAAA;CACrD"}
+{"version":3,"file":"ITrigger.d.ts","sourceRoot":"","sources":["../typescript/ITrigger.ts"],"names":[],"mappings":"AAGA,MAAM,CAAC,OAAO,WAAW,QAAQ;IAC7B,MAAM,EAAC,MAAM,CAAC;IACd,SAAS,EAAC,MAAM,CAAC;IACjB,QAAQ,CAAC,IAAI,EAAC,MAAM,EAAC,aAAa,EAAC,MAAM,GAAE,OAAO,CAAA;CACrD"}

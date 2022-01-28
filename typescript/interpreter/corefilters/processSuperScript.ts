@@ -1,4 +1,4 @@
-import RawItem , {ItemType} from "./rawItem.js";
+import RawItem , {ItemType} from "../item.js";
 
 export default function processSuperScript(code:RawItem[]):RawItem[]{
 let defaulyFontSize = 100;

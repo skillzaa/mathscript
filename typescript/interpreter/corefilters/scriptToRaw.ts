@@ -1,6 +1,6 @@
-import RawItem , {ItemType} from "./rawItem.js";
+import Item , {ItemType} from "../item.js";
 
-export default function scriptToRaw(code:string):RawItem[]{
+export default function scriptToRaw(code:string):Item[]{
 let normal_mode = true;    
 const raw = [];    
 let commandBuffer = "";
@@ -15,7 +15,7 @@ for (let i = 0; i < code.length; i++) {
     if (normal_mode == false && item == "("){
         commandBuffer += item; //add the bracket;
         normal_mode = true;
-        let i = new RawItem();
+        let i = new Item();
         i.content = commandBuffer;
         i.itemType = ItemType.CommandOpen;
         i.pairId = Math.ceil(Math.random() * 10000);
@@ -26,7 +26,7 @@ for (let i = 0; i < code.length; i++) {
     //----------------------------------
     if (normal_mode == true){
         // collect items
-        let i = new RawItem();
+        let i = new Item();
         i.content = item;
         i.itemType = ItemType.data;
         raw.push(i);
